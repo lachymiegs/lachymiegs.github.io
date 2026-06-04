@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project SA Great — Lachlan Miegel</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .project-hero {
+      padding: 5rem 0 4rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .project-hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .breadcrumb {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .breadcrumb a { color: var(--text-light); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--text); }
+
+    .project-hero h1 { margin-bottom: 1.25rem; }
+
+    .project-hero-desc {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--text-mid);
+      line-height: 1.75;
+      max-width: 540px;
+      margin-bottom: 2rem;
+    }
+
+    .project-content {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .project-section { padding: 3.5rem 0; border-bottom: 1px solid var(--rule); }
+    .project-section:last-child { border-bottom: none; }
+
+    .project-section h2 { margin-bottom: 1.25rem; }
+
+    .project-section p { font-size: 16px; }
+
+    .img-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .sidebar-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .project-nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--rule);
+      margin-top: 2rem;
+    }
+
+    .project-nav a {
+      font-size: 14px;
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .project-nav a:hover { color: var(--text); }
+
+    @media (max-width: 680px) {
+      .sidebar-layout { grid-template-columns: 1fr; }
+      .img-grid-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="nav-name" href="index.html">Lachlan Miegel</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="mailto:lachy.miegel@gmail.com">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="project-hero">
+    <div class="project-hero-inner">
+      <div class="breadcrumb">
+        <a href="projects.html">Projects</a>
+        <span>—</span>
+        <span>Project SA Great</span>
+      </div>
+      <div class="tags" style="margin-bottom:1.25rem;">
+        <span class="tag">Tripoli L3</span>
+        <span class="tag">Solo build</span>
+        <span class="tag">Mach 2</span>
+        <span class="tag">Flight 2026</span>
+      </div>
+      <h1>Project SA Great</h1>
+      <p class="project-hero-desc">
+        A complete Mach 2 sounding rocket targeting 24,000 ft, designed and built
+        entirely by me as my Tripoli Level 3 certification vehicle.
+      </p>
+    </div>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div style="max-width:var(--wide); margin:0 auto; padding:2.5rem 3rem;">
+    <div class="img-placeholder" style="aspect-ratio:16/7;">
+      <span class="ph-label">↑ Replace with: best wide shot of the complete rocket</span>
+      <span class="ph-label" style="opacity:0.6;">Recommended: full vehicle on a launch rail or flat lay</span>
+    </div>
+  </div>
+
+  <div class="project-content">
+
+    <!-- OVERVIEW -->
+    <div class="project-section">
+      <div class="sidebar-layout">
+        <div>
+          <h2>Overview</h2>
+          <p>
+            Project SA Great is a Mach 2 sounding rocket designed around a
+            <strong>[ motor designation — e.g. Cesaroni M1800 ]</strong>, chosen
+            because it was the right solid motor for the flight regime I was targeting.
+            I designed the entire vehicle around that motor and the 24,000 ft apogee target.
+          </p>
+          <p>
+            Every primary structure, recovery assembly, and avionics integration is my own
+            work — the only COTS items are the flight computer and parachutes. This is the
+            project I'm most proud of, because every decision and every failure mode is mine.
+          </p>
+        </div>
+        <div>
+          <table class="spec-table">
+            <tr><td>Target altitude</td><td>24,000 ft</td></tr>
+            <tr><td>Max velocity</td><td>Mach 2</td></tr>
+            <tr><td>Motor</td><td>[ designation ]</td></tr>
+            <tr><td>Airframe</td><td>[ material ]</td></tr>
+            <tr><td>Fin material</td><td>[ material ]</td></tr>
+            <tr><td>Recovery</td><td>Dual deploy, custom hardware</td></tr>
+            <tr><td>Avionics</td><td>COTS flight computer, custom bay</td></tr>
+            <tr><td>Certification</td><td>Tripoli Level 3</td></tr>
+            <tr><td>Status</td><td>Flight scheduled 2026</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- STRUCTURES -->
+    <div class="project-section">
+      <h2>Structural design &amp; verification</h2>
+      <p>
+        Structural adequacy was established through a combination of hand calculations,
+        load case definition, and FEA in SolidWorks Simulation. The critical load cases
+        were <strong>[ describe — e.g. max-Q aerodynamic loading, fin root bending at
+        motor burnout, recovery ejection loads ]</strong>.
+      </p>
+      <p>
+        [ Describe your approach to structural verification — what factors of safety you
+        designed to, what the governing failure modes were, any interesting structural
+        decisions. 2–3 sentences is enough. ]
+      </p>
+
+      <div class="img-grid-2" style="margin-top:2rem;">
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ FEA screenshot or structural drawing</span>
+          </div>
+          <p class="img-caption">[ Caption — e.g. FEA stress plot, fin root interface ]</p>
+        </div>
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ Fin can / airframe detail photo</span>
+          </div>
+          <p class="img-caption">[ Caption ]</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECOVERY -->
+    <div class="project-section">
+      <h2>Recovery system</h2>
+      <p>
+        The recovery system was developed from first principles, specifically to address
+        failure modes I had observed across previous flight vehicles. [ Describe what
+        those failure modes were — e.g. ejection charge reliability, harness routing,
+        separation interface issues. ]
+      </p>
+      <p>
+        [ Describe your design solution — what you changed, why, and how you validated it.
+        This is the most technically novel part of the project and deserves 2–3 paragraphs.
+        What was your testing approach? What did you change between iterations? ]
+      </p>
+
+      <div style="margin-top:2rem;">
+        <div class="img-placeholder" style="aspect-ratio:16/9;">
+          <span class="ph-label">↑ Recovery hardware — best photo you have of the system</span>
+        </div>
+        <p class="img-caption">[ Caption — describe what is shown ]</p>
+      </div>
+
+      <div class="img-grid-2" style="margin-top:1rem;">
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ Recovery detail 1</span>
+          </div>
+          <p class="img-caption">[ Caption ]</p>
+        </div>
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ Recovery detail 2</span>
+          </div>
+          <p class="img-caption">[ Caption ]</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AVIONICS -->
+    <div class="project-section">
+      <h2>Avionics bay</h2>
+      <p>
+        [ Describe the avionics bay design — the sled, structural interfaces, wiring,
+        dual-deploy configuration. What were the key design decisions? What did you
+        have to figure out yourself? ]
+      </p>
+
+      <div class="img-grid-2" style="margin-top:2rem;">
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ Avionics bay — assembled</span>
+          </div>
+          <p class="img-caption">[ Caption ]</p>
+        </div>
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ Avionics bay — detail / wiring</span>
+          </div>
+          <p class="img-caption">[ Caption ]</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MANUFACTURING -->
+    <div class="project-section">
+      <h2>Manufacturing</h2>
+      <p>
+        [ Describe the fabrication process for the key structural components — fin can
+        attachment method, body tube source or manufacture, any machined parts. What
+        did you make yourself vs source externally? What was the hardest thing to
+        fabricate and how did you approach it? ]
+      </p>
+
+      <div style="margin-top:2rem;">
+        <div class="img-placeholder" style="aspect-ratio:16/9;">
+          <span class="ph-label">↑ Best manufacturing / build process photo</span>
+        </div>
+        <p class="img-caption">[ Caption ]</p>
+      </div>
+    </div>
+
+    <!-- PROJECT NAV -->
+    <div class="project-nav">
+      <a href="projects.html">← All projects</a>
+      <a href="project-ares.html">ARES Hybrid Rocket →</a>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <span class="footer-left">© 2026 Lachlan Miegel</span>
+    <ul class="footer-links">
+      <li><a href="mailto:lachy.miegel@gmail.com">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/lachlan-miegel-b42b261a9/" target="_blank">LinkedIn</a></li>
+      <li><a href="#top">Top</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

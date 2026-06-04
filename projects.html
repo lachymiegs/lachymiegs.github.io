@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Lachlan Miegel</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-header {
+      padding: 5rem 0 4rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .projects-list {
+      max-width: var(--wide);
+      margin: 0 auto;
+      padding: 0 3rem;
+    }
+
+    .project-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.2s;
+    }
+
+    .project-row:hover { opacity: 0.75; }
+
+    .project-row-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--bg-warm);
+      border-radius: 3px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-row-img img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+
+    .project-row-body { padding-top: 0.5rem; }
+
+    .project-row-meta {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .project-row-title {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .project-row-desc {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-row-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      border-bottom: 1px solid var(--text);
+      padding-bottom: 1px;
+    }
+
+    @media (max-width: 680px) {
+      .project-row { grid-template-columns: 1fr; gap: 1.5rem; }
+      .projects-list { padding: 0 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="nav-name" href="index.html">Lachlan Miegel</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="mailto:lachy.miegel@gmail.com">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="mono-label" style="margin-bottom:1.5rem;">Projects</div>
+      <h1>Engineering work</h1>
+    </div>
+  </div>
+
+  <div class="projects-list">
+
+    <a class="project-row" href="project-l3.html">
+      <div class="project-row-img">
+        <!-- Replace with: <img src="images/l3-cover.jpg" alt="Project SA Great" /> -->
+        <span class="ph-label" style="font-family:var(--font-mono);font-size:11px;color:var(--text-light);">↑ l3-cover.jpg</span>
+      </div>
+      <div class="project-row-body">
+        <div class="project-row-meta">2025 — Present &nbsp;·&nbsp; Solo build &nbsp;·&nbsp; Mach 2 · 24,000 ft</div>
+        <div class="project-row-title">Project SA Great</div>
+        <p class="project-row-desc">
+          A complete Mach 2 sounding rocket designed and built entirely by me as my
+          Tripoli Level 3 certification vehicle. Every primary structure, recovery
+          assembly, and avionics integration is my own work. Flight scheduled 2026.
+        </p>
+        <div class="tags" style="margin-bottom:1.25rem;">
+          <span class="tag">Structures</span>
+          <span class="tag">Composites</span>
+          <span class="tag">Recovery systems</span>
+          <span class="tag">FEA</span>
+          <span class="tag">Tripoli L3</span>
+        </div>
+        <span class="project-row-link">Read more →</span>
+      </div>
+    </a>
+
+    <a class="project-row" href="project-ares.html">
+      <div class="project-row-img">
+        <!-- Replace with: <img src="images/ares-cover.jpg" alt="ARES Hybrid Rocket" /> -->
+        <span class="ph-label" style="font-family:var(--font-mono);font-size:11px;color:var(--text-light);">↑ ares-cover.jpg</span>
+      </div>
+      <div class="project-row-body">
+        <div class="project-row-meta">2023 — Present &nbsp;·&nbsp; Team Lead &nbsp;·&nbsp; M-class · 10,000 ft</div>
+        <div class="project-row-title">ARES Hybrid Rocket</div>
+        <p class="project-row-desc">
+          Australia's first student-designed hybrid rocket. As Team Lead I manage
+          115 members across six subteams. As Structures Lead I personally designed
+          and manufactured the fin can, avionics bay, and primary structural assemblies.
+        </p>
+        <div class="tags" style="margin-bottom:1.25rem;">
+          <span class="tag">Team leadership</span>
+          <span class="tag">Hybrid propulsion</span>
+          <span class="tag">Composite structures</span>
+          <span class="tag">Systems integration</span>
+        </div>
+        <span class="project-row-link">Read more →</span>
+      </div>
+    </a>
+
+    <a class="project-row" href="project-headrests.html">
+      <div class="project-row-img">
+        <!-- Replace with: <img src="images/headrests-cover.jpg" alt="Pedal Prix Headrests" /> -->
+        <span class="ph-label" style="font-family:var(--font-mono);font-size:11px;color:var(--text-light);">↑ headrests-cover.jpg</span>
+      </div>
+      <div class="project-row-body">
+        <div class="project-row-meta">2022 &nbsp;·&nbsp; Year 12 &nbsp;·&nbsp; Self-taught composites</div>
+        <div class="project-row-title">Pedal Prix Composite Headrests</div>
+        <p class="project-row-desc">
+          Custom vacuum-bagged composite headrests for a human-powered Pedal Prix
+          vehicle, fabricated in my garage with no prior composites experience and
+          no access to formal tooling. This is where my composites background began.
+        </p>
+        <div class="tags" style="margin-bottom:1.25rem;">
+          <span class="tag">Vacuum bagging</span>
+          <span class="tag">Wet layup</span>
+          <span class="tag">Mould making</span>
+          <span class="tag">Self-taught</span>
+        </div>
+        <span class="project-row-link">Read more →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <footer class="site-footer">
+    <span class="footer-left">© 2026 Lachlan Miegel</span>
+    <ul class="footer-links">
+      <li><a href="mailto:lachy.miegel@gmail.com">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/lachlan-miegel-b42b261a9/" target="_blank">LinkedIn</a></li>
+      <li><a href="#top">Top</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
