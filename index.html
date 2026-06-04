@@ -214,12 +214,43 @@
     }
 
     .about-strip-inner {
-      max-width: var(--max);
+      max-width: var(--wide);
       margin: 0 auto;
-      padding: 0 2rem;
+      padding: 0 3rem;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 5rem;
+      align-items: center;
     }
 
-    .about-strip p { font-size: 15px; }
+    .about-strip-text p { font-size: 15px; }
+
+    .about-strip-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: 3px;
+      overflow: hidden;
+      background: var(--bg-warm);
+    }
+
+    .about-strip-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-strip-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      border: 1px dashed var(--rule);
+      border-radius: 3px;
+    }
 
     .about-strip-links {
       margin-top: 2rem;
@@ -243,6 +274,8 @@
 
     @media (max-width: 900px) {
       .projects-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-strip-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-strip-photo { aspect-ratio: 4/3; max-width: 480px; }
     }
 
     @media (max-width: 600px) {
@@ -363,24 +396,35 @@
 
   <div class="about-strip">
     <div class="about-strip-inner">
-      <h3>Background</h3>
-      <p>
-        I came to engineering through rocketry — taught myself motor selection,
-        stability analysis, and composite manufacturing before any of it appeared
-        in my coursework. Within six months of starting at ARES I was Structures Lead.
-        I've been leading the team ever since.
-      </p>
-      <p>
-        I currently work as a <strong>Quality Control Engineer at Hargo Engineering</strong>,
-        performing dimensional inspection and FAI of precision aerospace components to
-        AS9100 standards. I am also Secretary and Launch Control Officer of the
-        <strong>Victorian Rocketry Association</strong> — Australia's largest Tripoli prefecture.
-      </p>
-      <p>I want to work on hypersonic vehicles and launch systems.</p>
-      <div class="about-strip-links">
-        <a href="cv.html">Full CV</a>
-        <a href="projects.html">All projects</a>
-        <a href="mailto:lachy.miegel@gmail.com">Get in touch</a>
+      <div class="about-strip-text">
+        <h3>Background</h3>
+        <p>
+          I came to engineering through rocketry — taught myself motor selection,
+          stability analysis, and composite manufacturing before any of it appeared
+          in my coursework. Within six months of starting at ARES I was Structures Lead.
+          I've been leading the team ever since.
+        </p>
+        <p>
+          I currently work as a <strong>Quality Control Engineer at Hargo Engineering</strong>,
+          performing dimensional inspection and FAI of precision aerospace components to
+          AS9100 standards. I am also Secretary and Launch Control Officer of the
+          <strong>Victorian Rocketry Association</strong> — Australia's largest Tripoli prefecture.
+        </p>
+        <p>I want to work on hypersonic vehicles and launch systems.</p>
+        <div class="about-strip-links">
+          <a href="cv.html">Full CV</a>
+          <a href="projects.html">All projects</a>
+          <a href="mailto:lachy.miegel@gmail.com">Get in touch</a>
+        </div>
+      </div>
+      <div class="about-strip-photo">
+        <!-- Once you have the photo, replace the placeholder div below with:
+             <img src="images/lachlan-launch-rail.jpg" alt="Lachlan loading a rocket onto the launch rail" />
+        -->
+        <div class="about-strip-photo-placeholder">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--text-xlight);">↑ lachlan-launch-rail.jpg</span>
+          <span style="font-family:var(--font-mono);font-size:10px;color:var(--text-xlight);opacity:0.6;">portrait orientation works best</span>
+        </div>
       </div>
     </div>
   </div>
