@@ -3,1226 +3,382 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lachlan Miegel — Engineering Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <title>Lachlan Miegel</title>
+  <meta name="description" content="Mechanical engineering student at the University of Melbourne. Structures, composites, and flight vehicle development." />
+  <link rel="stylesheet" href="style.css" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg: #0a0a08;
-      --bg-surface: #111110;
-      --bg-card: #161614;
-      --bg-card-hover: #1c1c19;
-      --border: rgba(255,255,255,0.07);
-      --border-hover: rgba(255,255,255,0.14);
-      --text-primary: #f0ede6;
-      --text-secondary: #8a8880;
-      --text-muted: #4a4845;
-      --accent: #c8a96e;
-      --accent-dim: rgba(200,169,110,0.12);
-      --accent-dim2: rgba(200,169,110,0.06);
-      --red: #d4543a;
-      --font-display: 'Syne', sans-serif;
-      --font-body: 'DM Sans', sans-serif;
-      --font-mono: 'DM Mono', monospace;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text-primary);
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.25rem 3rem;
-      background: rgba(10,10,8,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-logo {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      font-weight: 400;
-      color: var(--accent);
-      letter-spacing: 0.08em;
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 400;
-      color: var(--text-secondary);
-      text-decoration: none;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--text-primary); }
-
-    /* HERO */
+    /* HOME-SPECIFIC */
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 8rem 3rem 4rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -20%;
-      right: -10%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(200,169,110,0.06) 0%, transparent 70%);
-      pointer-events: none;
+      padding: 7rem 0 5rem;
+      border-bottom: 1px solid var(--rule);
     }
 
     .hero-inner {
-      max-width: 1100px;
+      max-width: var(--max);
       margin: 0 auto;
-      width: 100%;
+      padding: 0 2rem;
     }
 
-    .hero-tag {
+    .hero-eyebrow {
       font-family: var(--font-mono);
       font-size: 12px;
-      font-weight: 400;
-      color: var(--accent);
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .hero-tag::before {
-      content: '';
-      display: block;
-      width: 32px;
-      height: 1px;
-      background: var(--accent);
-    }
-
-    h1 {
-      font-family: var(--font-display);
-      font-size: clamp(3.5rem, 8vw, 7rem);
-      font-weight: 800;
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-      color: var(--text-primary);
+      color: var(--text-light);
       margin-bottom: 2rem;
     }
 
-    h1 span { color: var(--accent); }
+    .hero h1 { margin-bottom: 2rem; }
 
-    .hero-desc {
-      max-width: 560px;
-      font-size: 17px;
+    .hero-bio {
+      font-size: 18px;
       font-weight: 300;
-      color: var(--text-secondary);
+      color: var(--text-mid);
       line-height: 1.75;
+      max-width: 560px;
       margin-bottom: 3rem;
     }
 
-    .hero-stats {
+    .hero-bio strong { color: var(--text); font-weight: 500; }
+
+    .hero-links {
       display: flex;
-      gap: 3rem;
-      margin-bottom: 3rem;
+      gap: 2rem;
+      align-items: center;
     }
 
-    .stat {
-      display: flex;
-      flex-direction: column;
+    .hero-links a {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: color 0.15s;
     }
+
+    .hero-links a:hover { color: var(--text); }
+
+    .hero-links a.primary {
+      color: var(--text);
+      font-weight: 500;
+      border-bottom: 1px solid var(--text);
+      padding-bottom: 1px;
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      border-bottom: 1px solid var(--rule);
+      padding: 2.5rem 0;
+    }
+
+    .stats-inner {
+      max-width: var(--wide);
+      margin: 0 auto;
+      padding: 0 3rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .stat-item {
+      padding: 0 2rem;
+      border-right: 1px solid var(--rule);
+    }
+
+    .stat-item:first-child { padding-left: 0; }
+    .stat-item:last-child { border-right: none; }
 
     .stat-num {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--text-primary);
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--text);
       line-height: 1;
+      display: block;
+      margin-bottom: 0.35rem;
     }
 
     .stat-label {
       font-family: var(--font-mono);
       font-size: 11px;
-      color: var(--text-muted);
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-top: 0.35rem;
+      color: var(--text-light);
     }
 
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
+    /* PROJECTS SECTION */
+    .projects-section {
+      padding: 5rem 0;
     }
 
-    .btn {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 0.85rem 1.75rem;
-      border-radius: 2px;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #0a0a08;
-    }
-
-    .btn-primary:hover { background: #d4b878; }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--text-secondary);
-      border: 1px solid var(--border-hover);
-    }
-
-    .btn-secondary:hover {
-      color: var(--text-primary);
-      border-color: var(--border-hover);
-      background: rgba(255,255,255,0.04);
-    }
-
-    /* SECTION */
-    section {
-      padding: 6rem 3rem;
-      max-width: 1100px;
+    .projects-header {
+      max-width: var(--wide);
       margin: 0 auto;
-    }
-
-    .section-header {
-      margin-bottom: 4rem;
-    }
-
-    .section-tag {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--accent);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      color: var(--text-primary);
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
-    .about-text p {
-      font-size: 16px;
-      color: var(--text-secondary);
-      margin-bottom: 1.25rem;
-      font-weight: 300;
-    }
-
-    .about-text p strong {
-      color: var(--text-primary);
-      font-weight: 500;
-    }
-
-    .about-sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .info-row {
+      padding: 0 3rem;
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      padding: 0.85rem 0;
-      border-bottom: 1px solid var(--border);
+      margin-bottom: 3rem;
     }
 
-    .info-row:last-child { border-bottom: none; }
-
-    .info-label {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .info-value {
-      font-size: 14px;
-      color: var(--text-secondary);
-      text-align: right;
-    }
-
-    .info-value a {
-      color: var(--accent);
+    .projects-header a {
+      font-size: 13px;
+      color: var(--text-light);
       text-decoration: none;
     }
 
-    .info-value a:hover { text-decoration: underline; }
+    .projects-header a:hover { color: var(--text); }
 
-    .skill-grid {
+    .projects-grid {
+      max-width: var(--wide);
+      margin: 0 auto;
+      padding: 0 3rem;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
     }
 
-    .skill-item {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-secondary);
-      padding: 0.6rem 0.85rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .skill-item::before {
-      content: '→';
-      color: var(--accent);
-      font-size: 10px;
-    }
-
-    /* PROJECTS */
-    .projects-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5px;
-    }
-
-    .project-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 2px;
+    .project-tile {
+      display: block;
+      text-decoration: none;
+      background: var(--bg-warm);
+      border-radius: 3px;
       overflow: hidden;
-      transition: border-color 0.2s, background 0.2s;
-      cursor: pointer;
+      transition: opacity 0.2s;
     }
 
-    .project-card:hover {
-      border-color: var(--border-hover);
-      background: var(--bg-card-hover);
-    }
+    .project-tile:hover { opacity: 0.8; }
 
-    .project-header {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 2rem;
-      padding: 2rem 2.5rem;
-    }
-
-    .project-number {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-muted);
-      letter-spacing: 0.08em;
-      min-width: 28px;
-    }
-
-    .project-title-block { }
-
-    .project-tags {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 0.4rem;
-      flex-wrap: wrap;
-    }
-
-    .tag {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.25rem 0.6rem;
-      border-radius: 2px;
-      background: var(--accent-dim2);
-      color: var(--accent);
-      border: 1px solid rgba(200,169,110,0.2);
-    }
-
-    .tag.red {
-      background: rgba(212,84,58,0.1);
-      color: var(--red);
-      border-color: rgba(212,84,58,0.2);
-    }
-
-    .project-name {
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      letter-spacing: -0.01em;
-    }
-
-    .project-meta {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.4rem;
-    }
-
-    .project-spec {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .project-status {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .project-status::before {
-      content: '';
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    .project-body {
-      display: none;
-      padding: 0 2.5rem 2.5rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .project-body.open { display: block; }
-
-    .project-body-inner {
-      padding-top: 2rem;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 3rem;
-    }
-
-    .project-description {
-      font-size: 15px;
-      color: var(--text-secondary);
-      font-weight: 300;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-
-    .project-highlights {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .project-highlights li {
-      font-size: 14px;
-      color: var(--text-secondary);
-      font-weight: 300;
-      padding-left: 1.25rem;
-      position: relative;
-    }
-
-    .project-highlights li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-size: 12px;
-    }
-
-    .project-specs-panel {
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      padding: 1.5rem;
-      height: fit-content;
-    }
-
-    .spec-row {
-      padding: 0.6rem 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-
-    .spec-row:last-child { border-bottom: none; }
-
-    .spec-label {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      color: var(--text-muted);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .spec-value {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: var(--text-primary);
-      font-weight: 500;
-    }
-
-    /* IMAGE PLACEHOLDER */
-    .img-placeholder {
+    .project-tile-img {
       width: 100%;
-      aspect-ratio: 16/9;
-      background: var(--bg-surface);
-      border: 1px dashed var(--border-hover);
-      border-radius: 2px;
+      aspect-ratio: 4/3;
+      background: var(--bg-warm);
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
+      overflow: hidden;
     }
 
-    .img-placeholder span {
+    .project-tile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-tile-img .ph-label {
       font-family: var(--font-mono);
       font-size: 11px;
-      color: var(--text-muted);
+      color: var(--text-light);
+    }
+
+    .project-tile-body {
+      padding: 1.25rem 1.5rem 1.5rem;
+    }
+
+    .project-tile-meta {
+      font-family: var(--font-mono);
+      font-size: 11px;
       letter-spacing: 0.08em;
-    }
-
-    /* RESUME SECTION */
-    .resume-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-    }
-
-    .resume-col h3 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .resume-entry {
-      margin-bottom: 2rem;
-    }
-
-    .resume-entry-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 0.25rem;
-    }
-
-    .resume-entry-title {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-primary);
-    }
-
-    .resume-entry-date {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .resume-entry-sub {
-      font-size: 13px;
-      color: var(--accent);
-      font-style: italic;
+      text-transform: uppercase;
+      color: var(--text-light);
       margin-bottom: 0.5rem;
     }
 
-    .resume-entry-desc {
+    .project-tile-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-tile-desc {
       font-size: 13px;
-      color: var(--text-secondary);
       font-weight: 300;
-      line-height: 1.65;
+      color: var(--text-mid);
+      line-height: 1.6;
     }
 
-    .resume-download {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    /* ABOUT STRIP */
+    .about-strip {
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 5rem 0;
+      background: var(--bg-warm);
     }
 
-    .resume-download p {
-      font-size: 14px;
-      color: var(--text-secondary);
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 3rem;
-      max-width: 1100px;
+    .about-strip-inner {
+      max-width: var(--max);
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 0 2rem;
     }
 
-    .footer-left {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-muted);
-    }
+    .about-strip h3 { margin-bottom: 1.5rem; }
 
-    .footer-links {
+    .about-strip p { font-size: 16px; }
+
+    .about-strip-links {
+      margin-top: 2rem;
       display: flex;
       gap: 2rem;
     }
 
-    .footer-links a {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-secondary);
+    .about-strip-links a {
+      font-size: 14px;
+      color: var(--text-mid);
       text-decoration: none;
-      transition: color 0.2s;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2px;
+      transition: color 0.15s, border-color 0.15s;
     }
 
-    .footer-links a:hover { color: var(--accent); }
-
-    /* DIVIDER */
-    .full-divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 0;
+    .about-strip-links a:hover {
+      color: var(--text);
+      border-color: var(--text);
     }
 
-    /* FADE IN */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* MOBILE */
     @media (max-width: 768px) {
-      nav { padding: 1rem 1.5rem; }
-      .nav-links { gap: 1.5rem; }
-      section { padding: 4rem 1.5rem; }
-      .hero { padding: 7rem 1.5rem 3rem; }
-      .about-grid, .resume-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .hero-stats { gap: 2rem; flex-wrap: wrap; }
-      .project-header { grid-template-columns: auto 1fr; gap: 1rem; }
-      .project-meta { display: none; }
-      .project-body-inner { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+      .stat-item { border-right: none; padding: 0; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .projects-header, .projects-grid { padding: 0 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a class="nav-logo" href="#top">LM.portfolio</a>
+  <nav class="site-nav">
+    <a class="nav-name" href="index.html">Lachlan Miegel</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#resume">Resume</a></li>
+      <li><a href="index.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="cv.html">CV</a></li>
       <li><a href="mailto:lachy.miegel@gmail.com">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
-  <div class="hero" id="top">
+  <div class="hero">
     <div class="hero-inner">
-      <div class="hero-tag">Mechanical Engineering · Aerospace · Melbourne, AU</div>
-      <h1>Lachlan<br /><span>Miegel</span></h1>
-      <p class="hero-desc">
-        Third-year Mechanical Engineering student at the University of Melbourne.
-        I design, analyse, and build high-performance aerospace structures —
-        from composite fin cans to complete flight vehicles.
+      <div class="hero-eyebrow">Melbourne, AU — Mechanical Engineering</div>
+      <h1>Lachlan<br /><em>Miegel</em></h1>
+      <p class="hero-bio">
+        Third-year Mechanical Engineering student at the University of Melbourne
+        and <strong>Hansen Scholar</strong> — one of 17 selected nationally.
+        I design, analyse, and build high-performance aerospace structures.
+        I lead <strong>ARES Rocketry</strong>, a 115-member student engineering
+        organisation, and hold a <strong>Tripoli Level 3</strong> certification.
       </p>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">Mach 3.5</span>
-          <span class="stat-label">Max flight regime</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">115</span>
-          <span class="stat-label">Team members led</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">3</span>
-          <span class="stat-label">Active flight programs</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">L3</span>
-          <span class="stat-label">Tripoli certified</span>
-        </div>
-      </div>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#projects">View projects</a>
-        <a class="btn btn-secondary" href="#resume">Resume</a>
-        <a class="btn btn-secondary" href="mailto:lachy.miegel@gmail.com">Get in touch</a>
+      <div class="hero-links">
+        <a class="primary" href="projects.html">View projects</a>
+        <a href="cv.html">CV</a>
+        <a href="mailto:lachy.miegel@gmail.com">lachy.miegel@gmail.com</a>
+        <a href="https://www.linkedin.com/in/lachlan-miegel-b42b261a9/" target="_blank">LinkedIn</a>
       </div>
     </div>
   </div>
 
-  <hr class="full-divider" />
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-header fade-in">
-      <div class="section-tag">01 — About</div>
-      <h2>Builder. Leader.<br />Engineer.</h2>
-    </div>
-
-    <div class="about-grid fade-in">
-      <div class="about-text">
-        <p>
-          I came to engineering through rocketry — taught myself motor selection,
-          stability analysis, and composite manufacturing before any of it appeared
-          in my coursework. Within six months of starting university I was
-          <strong>Structures Lead of ARES Rocketry</strong>, and I've been leading
-          the team ever since.
-        </p>
-        <p>
-          I'm currently finishing my undergraduate degree at Melbourne while leading
-          a 115-member student engineering organisation, working as a
-          <strong>Quality Control Engineer at Hargo Engineering</strong> on precision
-          aerospace components, and designing fin structures for a Mach 3.5 record
-          attempt vehicle.
-        </p>
-        <p>
-          I was named a <strong>Hansen Scholar</strong> — one of 17 selected nationally —
-          the University of Melbourne's flagship undergraduate scholarship recognising
-          academic excellence, leadership, and resilience.
-        </p>
-        <p>
-          I want to work on hypersonic vehicles and launch systems. I build things,
-          I fly them, and I learn from what doesn't work.
-        </p>
-
-        <div class="skill-grid">
-          <div class="skill-item">Composite structures</div>
-          <div class="skill-item">FEA (SolidWorks Sim)</div>
-          <div class="skill-item">Wet layup / vac bag / infusion</div>
-          <div class="skill-item">Flutter analysis</div>
-          <div class="skill-item">Onshape / SolidWorks CAD</div>
-          <div class="skill-item">GD&T / AS9100</div>
-          <div class="skill-item">3-axis CNC milling</div>
-          <div class="skill-item">Pressure vessel compliance</div>
-        </div>
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-num">Mach 3.5</span>
+        <span class="stat-label">Max flight regime</span>
       </div>
-
-      <div class="about-sidebar">
-        <div class="info-row">
-          <span class="info-label">Degree</span>
-          <span class="info-value">BSci Mech. Eng. Systems</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">University</span>
-          <span class="info-value">University of Melbourne</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">WAM</span>
-          <span class="info-value">76</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Scholarship</span>
-          <span class="info-value">Hansen Scholar (1 of 17 nationally)</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Graduation</span>
-          <span class="info-value">Dec 2026 (expected)</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Location</span>
-          <span class="info-value">Melbourne, AU</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Email</span>
-          <span class="info-value"><a href="mailto:lachy.miegel@gmail.com">lachy.miegel@gmail.com</a></span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">LinkedIn</span>
-          <span class="info-value"><a href="https://www.linkedin.com/in/lachlan-miegel-b42b261a9/" target="_blank">lachlan-miegel</a></span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Tripoli cert.</span>
-          <span class="info-value">Level 3</span>
-        </div>
+      <div class="stat-item">
+        <span class="stat-num">115</span>
+        <span class="stat-label">Team members led</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Active flight programs</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">L3</span>
+        <span class="stat-label">Tripoli certified</span>
       </div>
     </div>
-  </section>
+  </div>
 
-  <hr class="full-divider" />
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-header fade-in">
-      <div class="section-tag">02 — Projects</div>
-      <h2>Flight programs &amp;<br />engineering work</h2>
+  <div class="projects-section">
+    <div class="projects-header">
+      <h3 style="margin-bottom:0;">Selected projects</h3>
+      <a href="projects.html">All projects →</a>
     </div>
+    <div class="projects-grid">
 
-    <div class="projects-list fade-in">
-
-      <!-- PROJECT 1 — L3 -->
-      <div class="project-card" onclick="toggleProject(this)">
-        <div class="project-header">
-          <span class="project-number">01</span>
-          <div class="project-title-block">
-            <div class="project-tags">
-              <span class="tag">Solo build</span>
-              <span class="tag">Tripoli L3</span>
-              <span class="tag red">Flight 2026</span>
-            </div>
-            <div class="project-name">Project SA Great</div>
-          </div>
-          <div class="project-meta">
-            <span class="project-spec">Mach 2 · 24,000 ft</span>
-            <span class="project-status">In final prep</span>
-          </div>
+      <a class="project-tile" href="project-l3.html">
+        <div class="project-tile-img">
+          <!-- Replace with: <img src="images/l3-cover.jpg" alt="Project SA Great — L3 rocket" /> -->
+          <span class="ph-label">↑ l3-cover.jpg</span>
         </div>
-        <div class="project-body">
-          <div class="project-body-inner">
-            <div>
-              <p class="project-description">
-                A complete Mach 2 sounding rocket targeting 24,000 ft, designed and built
-                entirely by me as my Tripoli Level 3 certification vehicle. Every primary
-                structure, recovery assembly, and avionics integration is my own work —
-                the only COTS items are the flight computer and parachutes.
-              </p>
-              <p class="project-description">
-                The project required me to develop a recovery system from first principles,
-                addressing specific failure modes I had observed across previous flight vehicles.
-                Structural adequacy was verified through hand calculations, load case definition,
-                and FEA in SolidWorks Simulation.
-              </p>
-              <ul class="project-highlights">
-                <li>Full structural verification: FEA, hand calculations, defined load cases</li>
-                <li>Recovery system designed from first principles — failure mode driven</li>
-                <li>Custom avionics bay: sled design, structural interfaces, dual-deploy</li>
-                <li>All primary structures and fin can personally fabricated</li>
-                <li>Engineering documentation package produced for external technical review</li>
-              </ul>
-
-              <!-- IMAGE PLACEHOLDERS — replace src with your actual photos -->
-              <div class="img-placeholder">
-                <span>↑ Replace with: completed airframe / fin can assembly photo</span>
-                <span style="font-size:10px; opacity:0.5;">Recommended: wide shot showing full vehicle</span>
-              </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1rem;">
-                <div class="img-placeholder" style="aspect-ratio:4/3;">
-                  <span>↑ Recovery hardware detail</span>
-                </div>
-                <div class="img-placeholder" style="aspect-ratio:4/3;">
-                  <span>↑ Avionics bay / structure</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-specs-panel">
-              <div class="spec-row">
-                <span class="spec-label">Target altitude</span>
-                <span class="spec-value">24,000 ft</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Max velocity</span>
-                <span class="spec-value">Mach 2</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Motor class</span>
-                <span class="spec-value">[ add motor designation ]</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Certification</span>
-                <span class="spec-value">Tripoli Level 3</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Structures</span>
-                <span class="spec-value">[ airframe material ]</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Recovery</span>
-                <span class="spec-value">Dual deploy, custom hardware</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Analysis tools</span>
-                <span class="spec-value">SolidWorks Sim, OpenRocket</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Status</span>
-                <span class="spec-value">Flight scheduled 2026</span>
-              </div>
-            </div>
-          </div>
+        <div class="project-tile-body">
+          <div class="project-tile-meta">Mach 2 · 24,000 ft · Solo build</div>
+          <div class="project-tile-title">Project SA Great</div>
+          <div class="project-tile-desc">Tripoli Level 3 certification rocket. Designed and built entirely by me.</div>
         </div>
-      </div>
+      </a>
 
-      <!-- PROJECT 2 — ARES -->
-      <div class="project-card" onclick="toggleProject(this)">
-        <div class="project-header">
-          <span class="project-number">02</span>
-          <div class="project-title-block">
-            <div class="project-tags">
-              <span class="tag">Team lead</span>
-              <span class="tag">SRAD Hybrid</span>
-              <span class="tag">115 members</span>
-            </div>
-            <div class="project-name">ARES Hybrid Rocket</div>
-          </div>
-          <div class="project-meta">
-            <span class="project-spec">M-class · 10,000 ft</span>
-            <span class="project-status">Manufacturing</span>
-          </div>
+      <a class="project-tile" href="project-ares.html">
+        <div class="project-tile-img">
+          <!-- Replace with: <img src="images/ares-cover.jpg" alt="ARES Hybrid Rocket" /> -->
+          <span class="ph-label">↑ ares-cover.jpg</span>
         </div>
-        <div class="project-body">
-          <div class="project-body-inner">
-            <div>
-              <p class="project-description">
-                ARES Rocketry's first student-designed hybrid rocket — a nitrous-paraffin
-                M-class vehicle (~4.5 kN thrust) targeting 10,000 ft. As Team Lead I set
-                technical direction, run formal CDR/PDR-style design reviews, and manage
-                delivery across six subteams under a $60k annual budget.
-              </p>
-              <p class="project-description">
-                As Structures Lead (2023–2025) I personally designed and manufactured the
-                fin can, avionics bay, and primary structural assemblies, producing full
-                flight vehicle CAD integrating hundreds of components. I am currently leading
-                development of <strong>Australia's first side-hatch recovery mechanism</strong> —
-                a novel deployment architecture developed from first principles.
-              </p>
-              <ul class="project-highlights">
-                <li>Personally fabricated fin can, avionics bay, primary structural assemblies</li>
-                <li>Full flight vehicle CAD: hundreds of components, all subsystems, Onshape</li>
-                <li>Australia's first side-hatch recovery mechanism — system architecture, metallic fabrication, vehicle integration</li>
-                <li>Composite nosecone manufacturing process redesign — improved repeatability</li>
-                <li>Manage 115 people, $60k budget, stakeholder engagement with faculty and suppliers</li>
-              </ul>
-
-              <div class="img-placeholder">
-                <span>↑ Replace with: full vehicle CAD render or team build photo</span>
-              </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1rem;">
-                <div class="img-placeholder" style="aspect-ratio:4/3;">
-                  <span>↑ Side-hatch mechanism CAD</span>
-                </div>
-                <div class="img-placeholder" style="aspect-ratio:4/3;">
-                  <span>↑ Side-hatch fabricated hardware</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-specs-panel">
-              <div class="spec-row">
-                <span class="spec-label">Propellant</span>
-                <span class="spec-value">Nitrous oxide / paraffin</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Motor class</span>
-                <span class="spec-value">M-class (~4.5 kN)</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Target altitude</span>
-                <span class="spec-value">10,000 ft</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Team size</span>
-                <span class="spec-value">115 members, 6 subteams</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Budget</span>
-                <span class="spec-value">$60k AUD / year</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Recovery</span>
-                <span class="spec-value">Side-hatch (AU first)</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">CAD platform</span>
-                <span class="spec-value">Onshape</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Status</span>
-                <span class="spec-value">In manufacturing</span>
-              </div>
-            </div>
-          </div>
+        <div class="project-tile-body">
+          <div class="project-tile-meta">M-class · 10,000 ft · Team lead</div>
+          <div class="project-tile-title">ARES Hybrid Rocket</div>
+          <div class="project-tile-desc">Australia's first student-designed hybrid rocket. 115-member team.</div>
         </div>
-      </div>
+      </a>
 
-      <!-- PROJECT 3 — HEADRESTS -->
-      <div class="project-card" onclick="toggleProject(this)">
-        <div class="project-header">
-          <span class="project-number">03</span>
-          <div class="project-title-block">
-            <div class="project-tags">
-              <span class="tag">Self-taught</span>
-              <span class="tag">Composites</span>
-            </div>
-            <div class="project-name">Pedal Prix Composite Headrests</div>
-          </div>
-          <div class="project-meta">
-            <span class="project-spec">Year 12 · 2022</span>
-            <span class="project-status" style="animation:none; color: var(--text-muted);">Completed</span>
-          </div>
+      <a class="project-tile" href="project-headrests.html">
+        <div class="project-tile-img">
+          <!-- Replace with: <img src="images/headrests-cover.jpg" alt="Pedal Prix Composite Headrests" /> -->
+          <span class="ph-label">↑ headrests-cover.jpg</span>
         </div>
-        <div class="project-body">
-          <div class="project-body-inner">
-            <div>
-              <p class="project-description">
-                In Year 12 I needed to fabricate custom composite headrests for our Pedal Prix
-                human-powered vehicle. I had no composites experience and no access to mould-making
-                equipment — so I figured it out from scratch in my garage.
-              </p>
-              <p class="project-description">
-                I developed a body-casting approach to capture the required geometry without CNC
-                or formal tooling, then taught myself vacuum bagging through iterative trial and
-                error — working out bag sealing, resin ratios, and layup schedule until the parts
-                were structurally sound and correctly fitted. The parts flew on the vehicle.
-              </p>
-              <p class="project-description">
-                This is where my composites background began. The same skills now underpin
-                structural work on vehicles targeting Mach 2 and beyond.
-              </p>
-              <ul class="project-highlights">
-                <li>Self-taught vacuum bagging process — no prior training or instruction</li>
-                <li>Custom body-casting mould approach under severe resource constraints</li>
-                <li>Iterated layup schedule, resin ratios, and bag sealing through testing</li>
-                <li>Parts fitted and flew on competition vehicle</li>
-              </ul>
-
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.5rem;">
-                <div class="img-placeholder" style="aspect-ratio:4/3;">
-                  <span>↑ Mould / layup process photo</span>
-                </div>
-                <div class="img-placeholder" style="aspect-ratio:4/3;">
-                  <span>↑ Finished headrest parts</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-specs-panel">
-              <div class="spec-row">
-                <span class="spec-label">Material</span>
-                <span class="spec-value">Carbon / glass fibre composite</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Process</span>
-                <span class="spec-value">Wet layup, vacuum bag</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Mould method</span>
-                <span class="spec-value">Body casting (self-developed)</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Facility</span>
-                <span class="spec-value">Home garage</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Context</span>
-                <span class="spec-value">Pedal Prix competition</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Year</span>
-                <span class="spec-value">2022 (Year 12)</span>
-              </div>
-            </div>
-          </div>
+        <div class="project-tile-body">
+          <div class="project-tile-meta">Composites · Year 12 · Self-taught</div>
+          <div class="project-tile-title">Pedal Prix Headrests</div>
+          <div class="project-tile-desc">Custom vacuum-bagged composite parts. Taught myself the process from scratch.</div>
         </div>
-      </div>
+      </a>
 
     </div>
-  </section>
+  </div>
 
-  <hr class="full-divider" />
-
-  <!-- RESUME -->
-  <section id="resume">
-    <div class="section-header fade-in">
-      <div class="section-tag">03 — Resume</div>
-      <h2>Experience &amp;<br />education</h2>
-    </div>
-
-    <div class="resume-grid fade-in">
-      <div class="resume-col">
-        <h3>Experience</h3>
-
-        <div class="resume-entry">
-          <div class="resume-entry-header">
-            <span class="resume-entry-title">ARES Rocketry</span>
-            <span class="resume-entry-date">Feb 2023 — Present</span>
-          </div>
-          <div class="resume-entry-sub">Team Lead (2025–), Structures Lead (2023–2025)</div>
-          <div class="resume-entry-desc">Lead 115-member organisation developing Australia's first student-designed hybrid rocket. Personally designed and manufactured fin can, avionics bay, and structural assemblies.</div>
-        </div>
-
-        <div class="resume-entry">
-          <div class="resume-entry-header">
-            <span class="resume-entry-title">Hargo Engineering</span>
-            <span class="resume-entry-date">Mar 2026 — Present</span>
-          </div>
-          <div class="resume-entry-sub">Quality Control Engineer</div>
-          <div class="resume-entry-desc">Dimensional inspection and FAI of precision aerospace components to AS9100 / ISO9001. CMM, Micro-Vu, GD&T, root cause analysis.</div>
-        </div>
-
-        <div class="resume-entry">
-          <div class="resume-entry-header">
-            <span class="resume-entry-title">Safety Dave</span>
-            <span class="resume-entry-date">2026 (from Sem 2)</span>
-          </div>
-          <div class="resume-entry-sub">Rapid Prototyping Engineer</div>
-          <div class="resume-entry-desc">Production-ready component design for hand controller hardware using additive manufacturing workflows.</div>
-        </div>
-
-        <div class="resume-entry">
-          <div class="resume-entry-header">
-            <span class="resume-entry-title">MCHND</span>
-            <span class="resume-entry-date">2025</span>
-          </div>
-          <div class="resume-entry-sub">Machining Internship</div>
-          <div class="resume-entry-desc">3-axis CNC milling, setups, workholding, and pallet robot cell operations in a commercial machining environment.</div>
-        </div>
-
-        <div class="resume-entry">
-          <div class="resume-entry-header">
-            <span class="resume-entry-title">Victorian Rocketry Association</span>
-            <span class="resume-entry-date">2025 — Present</span>
-          </div>
-          <div class="resume-entry-sub">Secretary / Launch Control Officer</div>
-          <div class="resume-entry-desc">Operations support for Australia's largest Tripoli prefecture. Launch Control Officer during flight operations.</div>
-        </div>
-      </div>
-
-      <div class="resume-col">
-        <h3>Education</h3>
-
-        <div class="resume-entry">
-          <div class="resume-entry-header">
-            <span class="resume-entry-title">University of Melbourne</span>
-            <span class="resume-entry-date">2023 — 2026</span>
-          </div>
-          <div class="resume-entry-sub">BSci Mechanical Engineering Systems</div>
-          <div class="resume-entry-desc">WAM: 76 · Hansen Scholar — one of 17 selected nationally. Flagship scholarship recognising academic excellence, leadership, and resilience.</div>
-        </div>
-
-        <h3 style="margin-top: 2.5rem;">Technical skills</h3>
-
-        <div class="resume-entry">
-          <div class="resume-entry-title" style="font-size:13px; margin-bottom:0.4rem;">Structures & analysis</div>
-          <div class="resume-entry-desc">FEA (SolidWorks Simulation), hand calculations, load case definition, structural verification, flutter margin analysis</div>
-        </div>
-
-        <div class="resume-entry">
-          <div class="resume-entry-title" style="font-size:13px; margin-bottom:0.4rem;">Design & CAD</div>
-          <div class="resume-entry-desc">Onshape (primary), SolidWorks; multi-hundred-part assemblies; GD&T; engineering drawing production</div>
-        </div>
-
-        <div class="resume-entry">
-          <div class="resume-entry-title" style="font-size:13px; margin-bottom:0.4rem;">Manufacturing & composites</div>
-          <div class="resume-entry-desc">Wet layup, vacuum bagging, resin infusion, co-cured carbon structures; 3-axis CNC, manual lathe, pallet robot cell</div>
-        </div>
-
-        <div class="resume-entry">
-          <div class="resume-entry-title" style="font-size:13px; margin-bottom:0.4rem;">Quality & verification</div>
-          <div class="resume-entry-desc">Dimensional inspection, FAI, CMM, Micro-Vu; AS9100 / ISO9001; root cause analysis</div>
-        </div>
+  <div class="about-strip">
+    <div class="about-strip-inner">
+      <h3>Background</h3>
+      <p>
+        I came to engineering through rocketry — I taught myself motor selection,
+        stability analysis, and composite manufacturing before any of it appeared in
+        my coursework. Within six months of starting university I was Structures Lead
+        of ARES Rocketry. I've been leading the team ever since.
+      </p>
+      <p>
+        I currently work as a <strong>Quality Control Engineer at Hargo Engineering</strong>,
+        performing dimensional inspection and first article inspection of precision aerospace
+        components to AS9100 standards. I am also Secretary and Launch Control Officer of the
+        <strong>Victorian Rocketry Association</strong> — Australia's largest Tripoli prefecture.
+      </p>
+      <p>
+        I want to work on hypersonic vehicles and launch systems.
+      </p>
+      <div class="about-strip-links">
+        <a href="cv.html">Full CV</a>
+        <a href="projects.html">All projects</a>
+        <a href="mailto:lachy.miegel@gmail.com">Get in touch</a>
       </div>
     </div>
+  </div>
 
-    <div class="resume-download fade-in">
-      <p>Full resume available as a PDF — reach out directly.</p>
-      <a class="btn btn-secondary" href="mailto:lachy.miegel@gmail.com">Request resume →</a>
-    </div>
-  </section>
-
-  <hr class="full-divider" />
-
-  <!-- FOOTER -->
-  <footer>
+  <footer class="site-footer">
     <span class="footer-left">© 2026 Lachlan Miegel</span>
-    <div class="footer-links">
-      <a href="mailto:lachy.miegel@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/lachlan-miegel-b42b261a9/" target="_blank">LinkedIn</a>
-      <a href="#top">Back to top</a>
-    </div>
+    <ul class="footer-links">
+      <li><a href="mailto:lachy.miegel@gmail.com">Email</a></li>
+      <li><a href="https://www.linkedin.com/in/lachlan-miegel-b42b261a9/" target="_blank">LinkedIn</a></li>
+      <li><a href="#top">Top</a></li>
+    </ul>
   </footer>
-
-  <script>
-    function toggleProject(card) {
-      const body = card.querySelector('.project-body');
-      const isOpen = body.classList.contains('open');
-      document.querySelectorAll('.project-body').forEach(b => b.classList.remove('open'));
-      if (!isOpen) body.classList.add('open');
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
 
 </body>
 </html>
