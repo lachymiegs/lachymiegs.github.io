@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O3400 Record Rocket — Lachlan Miegel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="nav-name" href="index.html">Lachlan Miegel</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="mailto:lachy.miegel@gmail.com">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="project-hero">
+    <div class="project-hero-inner">
+      <div class="breadcrumb">
+        <a href="projects.html">Projects</a>
+        <span>—</span>
+        <span>O3400 Record Rocket</span>
+      </div>
+      <div class="tags" style="margin-bottom:1rem;">
+        <span class="tag">Fin Can Lead</span>
+        <span class="tag">Mach 3.5</span>
+        <span class="tag">81,000 ft</span>
+        <span class="tag gold">Record attempt</span>
+        <span class="tag gold">In design</span>
+      </div>
+      <h1>O3400 Record Rocket</h1>
+      <p class="project-hero-desc">
+        A record attempt on the O3400 motor altitude record, currently standing at
+        75,000 ft. We are projecting 81,000 ft. I am designing and building the
+        fin can to survive Mach 3.5 flight.
+      </p>
+    </div>
+  </div>
+
+  <div style="max-width:var(--wide); margin:0 auto; padding:2.5rem 3rem;">
+    <div class="img-placeholder" style="aspect-ratio:16/7;">
+      <span class="ph-label">↑ Replace with: OpenRocket side profile or best conceptual render</span>
+      <span class="ph-label" style="opacity:0.6;">A clean OpenRocket screenshot works well here</span>
+    </div>
+  </div>
+
+  <div class="project-content">
+
+    <!-- OVERVIEW -->
+    <div class="project-section">
+      <div class="sidebar-layout">
+        <div>
+          <h2>Overview</h2>
+          <p>
+            The O3400 is one of the most powerful commercially available solid rocket
+            motors. The current altitude record for an O3400-powered vehicle stands
+            at 75,000 ft. This project is a direct attempt to push that to
+            <strong>81,000 ft</strong> — a 8% improvement on the existing record.
+          </p>
+          <p>
+            At the velocities required to reach that altitude, the aerodynamic and
+            thermal environment is severe. The vehicle will reach <strong>Mach 3.5</strong>
+            — a flight regime where aeroheating, flutter, and structural loads interact
+            in ways that conventional high-power rocketry hardware is not designed to handle.
+            Every component has to be built specifically for this environment.
+          </p>
+          <p>
+            I am responsible for the fin can — the most structurally and aerodynamically
+            demanding assembly on the vehicle.
+          </p>
+        </div>
+        <div class="spec-panel">
+          <table class="spec-table">
+            <tr><td>Motor</td><td>O3400</td></tr>
+            <tr><td>Target altitude</td><td>81,000 ft</td></tr>
+            <tr><td>Current record</td><td>75,000 ft</td></tr>
+            <tr><td>Max velocity</td><td>Mach 3.5</td></tr>
+            <tr><td>My role</td><td>Fin Can Lead</td></tr>
+            <tr><td>Architecture</td><td>Co-cured carbon sleeve</td></tr>
+            <tr><td>Status</td><td>Conceptual design</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESIGN ENVIRONMENT -->
+    <div class="project-section">
+      <h2>The Mach 3.5 design environment</h2>
+      <p>
+        Most high-power rocketry fin cans are designed for subsonic or low supersonic
+        flight. At Mach 3.5 the problem set changes fundamentally. The four primary
+        design drivers I am working through are:
+      </p>
+      <p>
+        <strong>Aerodynamic loading.</strong> Dynamic pressure at Mach 3.5 produces
+        fin root bending moments and shear loads significantly beyond what standard
+        HPR hardware is rated for. I am sizing the fin geometry and attachment
+        architecture against these loads directly.
+      </p>
+      <p>
+        <strong>Flutter margins.</strong> Fin flutter is a aeroelastic instability
+        that can destroy a fin can within milliseconds above a critical velocity.
+        Establishing adequate flutter margins at Mach 3.5 is a primary structural
+        requirement — not an afterthought.
+      </p>
+      <p>
+        <strong>Thermal effects.</strong> Aerodynamic heating at Mach 3.5 produces
+        surface temperatures that affect material properties and introduce thermal
+        stresses. Material selection and thickness decisions have to account for
+        the thermal environment, not just mechanical loads.
+      </p>
+      <p>
+        <strong>Structural sizing.</strong> The fin can has to be light enough not
+        to hurt performance, stiff enough to maintain flutter margins, and strong
+        enough to survive the full load envelope. These constraints pull in different
+        directions and the co-cured architecture is the solution I have landed on
+        to satisfy all three simultaneously.
+      </p>
+
+      <div style="margin-top:2rem;">
+        <div class="img-placeholder" style="aspect-ratio:16/9;">
+          <span class="ph-label">↑ OpenRocket simulation — velocity or altitude plot</span>
+        </div>
+        <p class="img-caption">OpenRocket flight simulation — O3400 to 81,000 ft</p>
+      </div>
+    </div>
+
+    <!-- CO-CURED ARCHITECTURE -->
+    <div class="project-section">
+      <h2>Co-cured carbon composite sleeve architecture</h2>
+      <p>
+        The fin can uses a co-cured carbon composite sleeve bonded directly to the
+        motor tube, with the fins integrated into the sleeve during the cure cycle.
+        This eliminates mechanical attachment interfaces entirely — no bolts, no
+        fasteners, no stress concentrations at the fin root.
+      </p>
+      <p>
+        The rationale is straightforward: at Mach 3.5, every mechanical interface
+        is a liability. Bolted fin attachments introduce stress concentrations,
+        require precise torque control, and can loosen under vibration and thermal
+        cycling. A co-cured sleeve removes all of that. The fins and the motor tube
+        become a single structural element.
+      </p>
+      <p>
+        [ As design progresses, add: layup schedule, fibre orientation rationale,
+        tooling approach, cure cycle. ]
+      </p>
+
+      <div class="img-grid-2" style="margin-top:2rem;">
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ Conceptual CAD or sketch — fin can cross section</span>
+          </div>
+          <p class="img-caption">[ Co-cured sleeve concept ]</p>
+        </div>
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ OpenRocket fin geometry view</span>
+          </div>
+          <p class="img-caption">[ Fin geometry — OpenRocket ]</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATUS -->
+    <div class="project-section">
+      <h2>Current status</h2>
+      <p>
+        The project is in conceptual design. The vehicle architecture is defined,
+        the motor is selected, and the flight simulation is established in OpenRocket.
+        I am currently working through the structural and aeroelastic analysis that
+        will drive the fin geometry and layup schedule decisions.
+      </p>
+      <p>
+        This page will be updated as the design matures and hardware is produced.
+      </p>
+    </div>
+
+    <div class="project-nav">
+      <a href="project-l3.html">← Project SA Great</a>
+      <a href="project-ares.html">ARES Hybrid Rocket →</a>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Lachlan Miegel</div>
+        <div class="footer-desc">Mechanical Engineering · University of Melbourne · Hansen Scholar</div>
+        <div class="footer-contact">
+          <a href="mailto:lachy.miegel@gmail.com">lachy.miegel@gmail.com</a>
+          <a href="https://www.linkedin.com/in/lachlan-miegel-b42b261a9/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-links">
+          <li><a href="index.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="mailto:lachy.miegel@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 Lachlan Miegel</div>
+  </footer>
+
+</body>
+</html>
