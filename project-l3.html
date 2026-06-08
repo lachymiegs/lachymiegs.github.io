@@ -109,7 +109,7 @@
       <div class="breadcrumb">
         <a href="projects.html">Projects</a>
         <span>—</span>
-        <span>Project SA Great</span>
+        <span>SA Great</span>
       </div>
       <div class="tags" style="margin-bottom:1.25rem;">
         <span class="tag">Tripoli L3</span>
@@ -125,9 +125,8 @@
     </div>
   </div>
 
-  <!-- HERO IMAGE -->
 <div style="max-width:var(--wide); margin:0 auto; padding:2.5rem 3rem;">
-  <img src="images/sagreat.jpeg" alt="Project SA Great" 
+  <img src="images/sagreat.jpeg" alt="SA Great" 
        style="width:100%; border-radius:3px; display:block; aspect-ratio:16/9; object-fit:cover; object-position:center top;" />
 </div>
 
@@ -139,15 +138,19 @@
         <div>
           <h2>Overview</h2>
           <p>
-            Project SA Great is a Mach 2 sounding rocket designed around an
-            <strong>AeroTech N3300</strong>, chosen
-            because it was the right solid motor for the flight regime I was targeting.
-            I designed the entire vehicle around that motor and the 24,000 ft apogee target.
+            SA Great is a Mach 2 sounding rocket designed around an
+            <strong>AeroTech N3300</strong>. As solid rocket motors become increasingly
+            difficult to source in Australia, I had to work with what motor I could find.
+            This engine will push the airframe to an apogee of 24,000 ft at Mach 2. 
           </p>
           <p>
             Every primary structure, recovery assembly, and avionics integration is my own
             work — the only COTS items are the flight computer, chutes, and body tubes. This is the
-            project I'm most proud of, because every decision and every failure mode is mine.
+            project I'm most proud of, because every decision and failure mode is mine. 
+          <p>
+            The rocket is ready, ground testing completed, and now awaiting CASA approval to launch.
+            The launchsite is Tolarno Station in NSW, where SA Great and the O3400 Project will fly.
+          </p>
           </p>
         </div>
         <div>
@@ -166,31 +169,31 @@
 
     <!-- STRUCTURES -->
     <div class="project-section">
-      <h2>Structural design &amp; verification</h2>
+      <h2>Structural Design &amp; Verification</h2>
       <p>
-        Structural adequacy was established through a combination of hand calculations,
-        load case definition, and FEA in SolidWorks Simulation. The critical load cases
-        were <strong>[ describe — e.g. max-Q aerodynamic loading, fin root bending at
-        motor burnout, recovery ejection loads ]</strong>.
+        Structural adequacy was established through a combination of hand calculations and
+        flight experience, overbuilt based on learnings from previous ARES projects. 
+        The critical load case is fin flutter during boost, where I required the flutter 
+        velocity to be 50% greater than the predicted max velocity. Calculations were performed on 
+        the bulkheads for epoxy tearout, yielding, and bolt shear to ensure all primary structures and recovery attachment points
+        are safe to support flight.
       </p>
       <p>
-        [ Describe your approach to structural verification — what factors of safety you
-        designed to, what the governing failure modes were, any interesting structural
-        decisions. 2–3 sentences is enough. ]
+        Given this rocket has no apogee target, unlike the ARES Project rockets I have made, the safety 
+        factors could be considerably higher to ensure no component fails despite the inherent weight gain. This meant many safety
+        factors are around 2-3, with components tested to their limits on the ground before they go near a flight vehicle
       </p>
 
       <div class="img-grid-2" style="margin-top:2rem;">
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ FEA screenshot or structural drawing</span>
-          </div>
-          <p class="img-caption">[ Caption — e.g. FEA stress plot, fin root interface ]</p>
+          <img src="images/sa-great-fins.JPG" alt="SA Great Fins" style="width:100%; 
+            aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Fins to suvive Mach 2</p>
         </div>
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Fin can / airframe detail photo</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
+          <img src="images/u-bolt.jpeg" alt="Yielded U Bolt" style="width:100%; aspect-ratio:4/3; 
+            object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Testing U-Bolts on Instron Machine</p>
         </div>
       </div>
     </div>
@@ -199,15 +202,17 @@
     <div class="project-section">
       <h2>Recovery system</h2>
       <p>
-        The recovery system was developed from first principles, specifically to address
-        failure modes I had observed across previous flight vehicles. [ Describe what
-        those failure modes were — e.g. ejection charge reliability, harness routing,
-        separation interface issues. ]
+        The recovery system was designed to functionally work everytime, as I have seen too many recovery
+        failures in high-powered rocketry. As such, a dual-separation, dual-deploy system is used, with energetics
+        responsible for the recovery events. Two chutes, a 24" drogue and a 72" main, will be deployed at apogee 
+        and 1,200 ft AGL respectively. 
       </p>
       <p>
-        [ Describe your design solution — what you changed, why, and how you validated it.
-        This is the most technically novel part of the project and deserves 2–3 paragraphs.
-        What was your testing approach? What did you change between iterations? ]
+        I decided to go with a recovery harness that maintains line strength and ensures repeatable deployment 
+        at any altitude. The lines are SK-75 Dyneema, 4mm, fingertrapped with 8cm loops in either end. I tested these on
+        an Instron machine, with the chosen line yielding at 27kN of force - well above anything I'd expect! The ejection charges
+        are kept in nylon tubing, allowing the energetic to fully combust and build pressure before bursting the tube and 
+        seperating the rocket.
       </p>
 
       <div style="margin-top:2rem;">
