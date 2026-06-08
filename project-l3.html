@@ -175,7 +175,7 @@
         flight experience, overbuilt based on learnings from previous ARES projects. 
         The critical load case is fin flutter during boost, where I required the flutter 
         velocity to be 50% greater than the predicted max velocity. Calculations were performed on 
-        the bulkheads for epoxy tearout, yielding, and bolt shear to ensure all primary structures
+        the bulkheads for epoxy tearout, yielding, and bolt shear to ensure all primary structures and recovery attachment points
         are safe to support flight.
       </p>
       <p>
@@ -186,11 +186,11 @@
 
       <div class="img-grid-2" style="margin-top:2rem;">
         <div>
-          <img src="images/sa-great-fins.JPG" alt="SA Great Fins" class="img-full" />
+          <img src="images/sa-great-fins.JPG" alt="SA Great Fins" style="aspect-ratio:4/3;" />
           <p class="img-caption">Fins to suvive Mach 2</p>
         </div>
         <div>
-          <img src="images/u-bolt.jpeg" alt="Yielded U Bolt" class="img-full" />
+          <img src="images/u-bolt.jpeg" alt="Yielded U Bolt" style="aspect-ratio:4/3;" />
           <p class="img-caption">Testing U-Bolts on Instron Machine</p>
         </div>
       </div>
@@ -200,15 +200,17 @@
     <div class="project-section">
       <h2>Recovery system</h2>
       <p>
-        The recovery system was developed from first principles, specifically to address
-        failure modes I had observed across previous flight vehicles. [ Describe what
-        those failure modes were — e.g. ejection charge reliability, harness routing,
-        separation interface issues. ]
+        The recovery system was designed to functionally work everytime, as I have seen too many recovery
+        failures in high-powered rocketry. As such, a dual-separation, dual-deploy system is used, with energetics
+        responsible for the recovery events. Two chutes, a 24" drogue and a 72" main, will be deployed at apogee 
+        and 1,200 ft AGL respectively. 
       </p>
       <p>
-        [ Describe your design solution — what you changed, why, and how you validated it.
-        This is the most technically novel part of the project and deserves 2–3 paragraphs.
-        What was your testing approach? What did you change between iterations? ]
+        I decided to go with a recovery harness that maintains line strength and ensures repeatable deployment 
+        at any altitude. The lines are SK-75 Dyneema, 4mm, fingertrapped with 8cm loops in either end. I tested these on
+        an Instron machine, with the chosen line yielding at 27kN of force - well above anything I'd expect! The ejection charges
+        are kept in nylon tubing, allowing the energetic to fully combust and build pressure before bursting the tube and 
+        seperating the rocket.
       </p>
 
       <div style="margin-top:2rem;">
