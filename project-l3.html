@@ -215,50 +215,47 @@
         seperating the rocket.
       </p>
 
-      <div style="margin-top:2rem;">
-        <div class="img-placeholder" style="aspect-ratio:16/9;">
-          <span class="ph-label">↑ Recovery hardware — best photo you have of the system</span>
-        </div>
-        <p class="img-caption">[ Caption — describe what is shown ]</p>
-      </div>
-
-      <div class="img-grid-2" style="margin-top:1rem;">
+      <div style="margin-top:2rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Recovery detail 1</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
+          <img src="images/lines-diagram.png" alt="Recovery lines diagram" 
+               style="width:100%; height:100%; object-fit:cover; border-radius:3px; display:block;" />
+              <p class="img-caption">Lines Diagram</p>
         </div>
-        <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Recovery detail 2</span>
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+          <div>
+            <img src="images/dyneema-broken.jpeg" alt="Recovery detail" 
+                 style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+            <p class="img-caption">Instron Tested Dyneema Samples</p>
           </div>
-          <p class="img-caption">[ Caption ]</p>
+          <div>
+            <img src="images/lines.jpeg" alt="Recovery detail" 
+                 style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+            <p class="img-caption">Completed Lines</p>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- AVIONICS -->
     <div class="project-section">
-      <h2>Avionics bay</h2>
+      <h2>Avionics Bay</h2>
       <p>
-        [ Describe the avionics bay design — the sled, structural interfaces, wiring,
-        dual-deploy configuration. What were the key design decisions? What did you
-        have to figure out yourself? ]
+        There are two avionics bays in the airframe, the GPS bay in the nosecone for RF transparancy, and the main bay 
+        connecting the two halves of the airframe. I am using a Blue Raven as primary FC, RRC3+ as secondary FC, and a Featherweight GPS. 
+        The avionics bay also has a GoPro for video logging, and an ARES Hermes v2 flight computer for data logging. 
+        The entire bay and sleds have been printed out of ABS-GF to survive Mach 2 flight conditions. 
       </p>
 
       <div class="img-grid-2" style="margin-top:2rem;">
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Avionics bay — assembled</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
+          <img src="images/your-photo-1.jpg" alt="Avionics bay assembled" 
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Your caption here</p>
         </div>
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Avionics bay — detail / wiring</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
+          <img src="images/your-photo-2.jpg" alt="Avionics bay detail" 
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Your caption here</p>
         </div>
       </div>
     </div>
@@ -267,17 +264,16 @@
     <div class="project-section">
       <h2>Manufacturing</h2>
       <p>
-        [ Describe the fabrication process for the key structural components — fin can
-        attachment method, body tube source or manufacture, any machined parts. What
-        did you make yourself vs source externally? What was the hardest thing to
-        fabricate and how did you approach it? ]
+        The composite airframe followed a tight manufacturing schedule, completing all structures
+        in two weeks. I decided to machine all the metallic components myself, with the avionics bulkheads
+        machined on a 3-axis CNC. This process solidifyed my understanding of toolpathing, fixturing, and setup, 
+        finishing two bulkheads in one day.  
       </p>
 
       <div style="margin-top:2rem;">
-        <div class="img-placeholder" style="aspect-ratio:16/9;">
-          <span class="ph-label">↑ Best manufacturing / build process photo</span>
-        </div>
-        <p class="img-caption">[ Caption ]</p>
+        <img src="images/av-bulkheads.jpeg" alt="Avionics Bulkheads" 
+             style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:3px; display:block;" />
+        <p class="img-caption">Completed Avionics Bulkheads</p>
       </div>
     </div>
 
