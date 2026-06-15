@@ -346,37 +346,48 @@
       </p>
     </div>
 
-  <!-- PHOTO HIGHLIGHTS -->
-    <div class="project-section">
-      <h2>Highlights</h2>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; margin-top:1.5rem;">
-    
-        <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
-          <img src="images/sa_paintshop.jpeg" alt="Highlight 1"
-               style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;" 
-               onmouseover="this.style.transform='scale(1.03)'" 
-               onmouseout="this.style.transform='scale(1)'" />
-          <div class="highlight-caption">Still wet from the paint</div>
-        </div>
-    
-        <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
-          <img src="images/sa_unfinished.jpeg" alt="Highlight 2"
-               style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
-               onmouseover="this.style.transform='scale(1.03)'"
-               onmouseout="this.style.transform='scale(1)'" />
-          <div class="highlight-caption">The basic airframe completed, awaiting tip-to-tip</div>
-        </div>
-    
-        <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
-          <img src="images/l1l2l3.jpeg" alt="Highlight 3"
-               style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
-               onmouseover="this.style.transform='scale(1.03)'"
-               onmouseout="this.style.transform='scale(1)'" />
-          <div class="highlight-caption">My Level 1, Level 2, and Level 3 rockets lined up before an ARES presentation</div>
-        </div>
-    
-      </div>
+ <!-- PHOTO HIGHLIGHTS -->
+<div class="project-section" style="border-bottom:none; padding-bottom:0;">
+  <h2>Highlights</h2>
+</div>
+</div> <!-- closes project-content -->
+
+<div style="max-width:var(--wide); margin:0 auto; padding:0 3rem 3rem;">
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem;">
+
+    <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+      <img src="images/sa_paintshop.jpeg" alt="Highlight 1"
+           style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+           onmouseover="this.style.transform='scale(1.03)'"
+           onmouseout="this.style.transform='scale(1)'" />
+      <div class="highlight-caption">Still wet from the paint</div>
     </div>
+
+    <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+      <img src="images/sa_unfinished.jpeg" alt="Highlight 2"
+           style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+           onmouseover="this.style.transform='scale(1.03)'"
+           onmouseout="this.style.transform='scale(1)'" />
+      <div class="highlight-caption">The basic airframe completed, awaiting tip-to-tip</div>
+    </div>
+
+    <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+      <img src="images/l1l2l3.jpeg" alt="Highlight 3"
+           style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+           onmouseover="this.style.transform='scale(1.03)'"
+           onmouseout="this.style.transform='scale(1)'" />
+      <div class="highlight-caption">My Level 1, Level 2, and Level 3 rockets lined up before an ARES presentation</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="project-content"> <!-- reopen project-content for nav -->
+  <div class="project-nav">
+    <a href="projects.html">← All projects</a>
+    <a href="project-ares.html">ARES Hybrid Rocket →</a>
+  </div>
+</div>
 
     <div class="project-nav">
       <a href="projects.html">← All projects</a>
