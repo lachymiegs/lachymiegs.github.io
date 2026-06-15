@@ -3,94 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SA Great — Lachlan Miegel</title>
+  <title>Project SA Great — Lachlan Miegel</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
-  <style>
-    .project-hero {
-      padding: 5rem 0 4rem;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .project-hero-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    .breadcrumb {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-light);
-      margin-bottom: 2rem;
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-    }
-
-    .breadcrumb a { color: var(--text-light); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--text); }
-
-    .project-hero h1 { margin-bottom: 1.25rem; }
-
-    .project-hero-desc {
-      font-size: 18px;
-      font-weight: 300;
-      color: var(--text-mid);
-      line-height: 1.75;
-      max-width: 540px;
-      margin-bottom: 2rem;
-    }
-
-    .project-content {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    .project-section { padding: 3.5rem 0; border-bottom: 1px solid var(--rule); }
-    .project-section:last-child { border-bottom: none; }
-
-    .project-section h2 { margin-bottom: 1.25rem; }
-
-    .project-section p { font-size: 16px; }
-
-    .img-grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-
-    .sidebar-layout {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-
-    .project-nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 2.5rem 0;
-      border-top: 1px solid var(--rule);
-      margin-top: 2rem;
-    }
-
-    .project-nav a {
-      font-size: 14px;
-      color: var(--text-mid);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-
-    .project-nav a:hover { color: var(--text); }
-
-    @media (max-width: 680px) {
-      .sidebar-layout { grid-template-columns: 1fr; }
-      .img-grid-2 { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
 
@@ -109,26 +24,30 @@
       <div class="breadcrumb">
         <a href="projects.html">Projects</a>
         <span>—</span>
-        <span>SA Great</span>
+        <span>Project SA Great</span>
       </div>
-      <div class="tags" style="margin-bottom:1.25rem;">
+      <div class="tags" style="margin-bottom:1rem;">
         <span class="tag">Tripoli L3</span>
         <span class="tag">Solo build</span>
         <span class="tag">Mach 2</span>
-        <span class="tag">Flight 2026</span>
+        <span class="tag">25,000 ft</span>
+        <span class="tag gold">Flight 2026</span>
       </div>
       <h1>Project SA Great</h1>
       <p class="project-hero-desc">
-        A complete Mach 2 sounding rocket targeting 24,000 ft, designed and built
-        entirely by me as my Tripoli Level 3 certification vehicle.
+        A complete Mach 2 sounding rocket targeting 25,000 ft, designed and built
+        entirely by me as my Tripoli Level 3 certification vehicle. Every primary
+        structure, recovery assembly, and avionics integration is my own work.
+        Documentation complete, rocket built, awaiting a CASA launch window.
       </p>
     </div>
   </div>
 
-<div style="max-width:var(--wide); margin:0 auto; padding:2.5rem 3rem;">
-  <img src="images/sagreat.jpeg" alt="Project SA Great" 
-       style="width:100%; aspect-ratio:2/3; object-fit:cover; border-radius:3px; display:block;" />
-</div>
+  <!-- HERO IMAGE -->
+  <div style="max-width:var(--wide); margin:0 auto; padding:2.5rem 3rem;">
+    <img src="images/sagreat.jpeg" alt="Project SA Great"
+         style="width:100%; aspect-ratio:2/3; object-fit:cover; object-position:center top; border-radius:3px; display:block;" />
+  </div>
 
   <div class="project-content">
 
@@ -138,150 +57,309 @@
         <div>
           <h2>Overview</h2>
           <p>
-            SA Great is a Mach 2 sounding rocket designed around an
-            <strong>AeroTech N3300</strong>. As solid rocket motors become increasingly
-            difficult to source in Australia, I had to work with what motor I could find.
-            This engine will push the airframe to an apogee of 24,000 ft at Mach 2. 
+            SA Great is a 2550mm tall, 114mm airframe rocket flying on an
+            <strong>AeroTech N3300R</strong> — 13,410 N·s total impulse, 4.1 second
+            burn, peak thrust of 4,226 N. At motor burnout the airframe will have
+            experienced approximately 28G. The vehicle is designed to reach Mach 2
+            and 25,000 ft on a dual separation, dual deploy recovery system.
           </p>
           <p>
-            Every primary structure, recovery assembly, and avionics integration is my own
-            work — the only COTS items are the flight computer, chutes, and body tubes. This is the
-            project I'm most proud of, because every decision and failure mode is mine. 
+            The build philosophy was to scratch-build as much as possible. The only
+            significant COTS components are the body tubes, flight computers,
+            parachutes, and GPS — everything else was designed and made by me.
+            This includes all bulkheads, the motor tube, fin can assembly, nosecone,
+            avionics bay, motor retainer, and recovery hardware.
           </p>
           <p>
-            The rocket is ready, ground testing completed, and now awaiting CASA approval to launch.
-            The launchsite is Tolarno Station in NSW, where SA Great and the O3400 Project will fly.
+            For a solo build, a rocket of this scale is the equivalent of what ARES
+            produces as a full team over a year. It was completed in a matter of weeks.
           </p>
-          <a href="docs/sa-great-level-3-report.pdf" 
+          <a href="docs/sa-great-technical-report.pdf"
              style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-light); text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:2px;">
             ↓ Download technical report
           </a>
         </div>
-        <div>
+        <div class="spec-panel">
           <table class="spec-table">
-            <tr><td>Target Apogee</td><td>24,000 ft</td></tr>
+            <tr><td>Motor</td><td>AeroTech N3300R</td></tr>
+            <tr><td>Total impulse</td><td>13,410 N·s</td></tr>
+            <tr><td>Peak thrust</td><td>4,226 N</td></tr>
+            <tr><td>Burn time</td><td>4.1 s</td></tr>
+            <tr><td>Target altitude</td><td>25,000 ft</td></tr>
             <tr><td>Max velocity</td><td>Mach 2</td></tr>
-            <tr><td>Motor</td><td>AeroTech N3300</td></tr>
-            <tr><td>Airframe</td><td>4.5" Carbon Fibre & Fibre Glass</td></tr>
-            <tr><td>Fin Attachment</td><td>Through wall with vacuum-bagged carbon tip to tip</td></tr>
-            <tr><td>Recovery</td><td>Dual deploy, custom hardware</td></tr>
-            <tr><td>Avionics</td><td>Blue Raven, RRC3+, Hermes v2</td></tr>
+            <tr><td>Max G-force</td><td>~28 G</td></tr>
+            <tr><td>Airframe ID</td><td>114 mm (4.5")</td></tr>
+            <tr><td>Length</td><td>2,550 mm</td></tr>
+            <tr><td>Motor mount</td><td>98 mm</td></tr>
+            <tr><td>Fins</td><td>4 × carbon plate</td></tr>
+            <tr><td>Recovery</td><td>Dual sep. dual deploy</td></tr>
+            <tr><td>Certification</td><td>Tripoli Level 3</td></tr>
+            <tr><td>Status</td><td>Built, awaiting CASA window</td></tr>
           </table>
         </div>
       </div>
     </div>
 
-    <!-- STRUCTURES -->
+    <!-- AIRFRAME -->
     <div class="project-section">
-      <h2>Structural Design &amp; Verification</h2>
+      <h2>Airframe</h2>
       <p>
-        Structural adequacy was established through a combination of hand calculations and
-        flight experience, overbuilt based on learnings from previous ARES projects. 
-        The critical load case is fin flutter during boost, where I required the flutter 
-        velocity to be 50% greater than the predicted max velocity. Calculations were performed on 
-        the bulkheads for epoxy tearout, yielding, and bolt shear to ensure all primary structures and recovery attachment points
-        are safe to support flight.
+        The airframe is of full composite construction — roll-wrapped carbon body
+        tubes, carbon plate fins and centering rings, in-house carbon motor tube,
+        fibreglass coupler and nosecone, and 6061-T6 aluminium bulkheads throughout.
       </p>
       <p>
-        Given this rocket has no apogee target, unlike the ARES Project rockets I have made, the safety 
-        factors could be considerably higher to ensure no component fails despite the inherent weight gain. This meant many safety
-        factors are around 2-3, with components tested to their limits on the ground before they go near a flight vehicle
+        Body tubes were sourced from China to specification — roll-wrapped carbon,
+        three 800mm sections. Two sections were bonded internally to form the 1600mm
+        booster tube; purchasing a single tube at that length would have incurred
+        prohibitive shipping costs. The third section forms the upper airframe.
       </p>
 
       <div class="img-grid-2" style="margin-top:2rem;">
         <div>
-          <img src="images/sa-great-fins.JPG" alt="SA Great Fins" style="width:100%; 
-            aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
-          <p class="img-caption">Fins to suvive Mach 2</p>
+          <img src="images/sa-great-nc.JPG" alt="SA Great airframe"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Completed airframe — nosecone and booster assembly</p>
         </div>
         <div>
-          <img src="images/u-bolt.jpeg" alt="Yielded U Bolt" style="width:100%; aspect-ratio:4/3; 
-            object-fit:cover; border-radius:3px; display:block;" />
-          <p class="img-caption">Testing U-Bolts on Instron Machine</p>
+          <img src="images/sa-great-fins.JPG" alt="SA Great fins"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Carbon plate fins — double diamond profile for Mach 2 flight</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIN CAN -->
+    <div class="project-section">
+      <h2>Fin can</h2>
+      <p>
+        Fins were waterjet cut from 5mm carbon plate, then hand chamfered on a belt
+        sander to a double diamond profile — optimised for high altitude, high velocity
+        flight to minimise wave drag. The motor tube was manufactured in-house: wet
+        laid onto a mandrel, then post-cured.
+      </p>
+      <p>
+        A custom fin jig was laser cut from 6mm MDF, designed so all four fins could
+        be tacked onto the motor tube simultaneously and held in precise alignment
+        during cure. After the initial tack bond using Epikote MGS BPR 135 bonding
+        paste, larger structural fillets were added between each fin and the motor
+        tube, and waterjet cut centering rings were bonded at equidistant spacing.
+      </p>
+      <p>
+        The fin can was then slid into slotted sections of the booster tube and bonded
+        with 25mm radius structural fillets of the same paste — large enough to
+        distribute the fin root loads across the tube wall effectively. The assembly
+        was finished with a tip-to-tip carbon layup: four layers, wet laid and vacuum
+        bagged, staggered from small to large to prioritise root chord strength where
+        loads are highest. This added approximately 0.8–1.6mm of thickness, bringing
+        the fin flutter velocity to approximately Mach 2.6 — a comfortable margin above
+        the design velocity of Mach 2.
+      </p>
+
+      <div class="img-grid-2" style="margin-top:2rem;">
+        <div>
+          <img src="images/sa-great-fins.JPG" alt="Fin can assembly"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Fin can — structural fillets and tip-to-tip layup complete</p>
+        </div>
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ Fin jig / bonding process photo</span>
+          </div>
+          <p class="img-caption">Custom laser-cut MDF fin alignment jig</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOSECONE -->
+    <div class="project-section">
+      <h2>Nosecone</h2>
+      <p>
+        The nosecone was a manufacturing method I developed specifically for this
+        build. Starting with a single split mould — 3D printed for rapid prototyping —
+        I bogged and primed the mould surface, then wet laid and vacuum bagged two
+        fibreglass half-shells. Fibreglass was chosen over carbon for RF transparency,
+        allowing the GPS antenna housed inside to transmit through the shell.
+      </p>
+      <p>
+        The two halves were bonded internally with fibreglass strips, producing a
+        clean external surface with no mechanical fasteners. An epoxy ring — machined
+        by me on a manual lathe — was bonded to the internal wall of the nosecone
+        using Epikote MGS BPR 135, providing the structural interface for the GPS
+        bulkhead. The GPS bulkhead itself was also machined on the lathe, bolting
+        into the ring and providing the parachute attachment U-bolt mount. A secondary
+        retention system uses an M6 threaded rod running from the brass nose tip
+        through to the bulkhead, tensioning everything in compression — belt and
+        braces for a flight-critical separation interface.
+      </p>
+      <p>
+        The nose tip was turned from brass in China — machining a clean point to that
+        tolerance on a manual lathe was beyond what I could reliably achieve, and the
+        brass acts as useful ballast for stability margin tuning.
+      </p>
+
+      <div class="img-grid-2" style="margin-top:2rem;">
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ Nosecone mould or layup process</span>
+          </div>
+          <p class="img-caption">Split mould — 3D printed, bogged and primed</p>
+        </div>
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ Finished nosecone</span>
+          </div>
+          <p class="img-caption">Finished fibreglass nosecone with brass tip</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MACHINED COMPONENTS -->
+    <div class="project-section">
+      <h2>Machined components</h2>
+      <p>
+        All aluminium components were machined by me personally. The bulkheads —
+        four in total across the avionics bay and recovery interfaces — were milled
+        on a Tormach CNC mill. The GPS bulkhead, epoxy ring, and motor retainer were
+        turned on a manual lathe.
+      </p>
+      <p>
+        The motor retainer is a 6061-T6 aluminium component that closes the aft end
+        of the airframe. It attaches radially using 12 M5 countersunk screws into the
+        body tube, and is designed to support the mass of the motor on the pad whilst
+        preventing the casing from sliding free after burnout. The 12-bolt pattern
+        provides approximately 80kg of holding force — well in excess of the motor
+        mass. Thrust transfers through the airframe via the aft enclosure interfacing
+        directly with the motor tube, not through the retainer itself.
+      </p>
+
+      <div class="img-grid-2" style="margin-top:2rem;">
+        <div>
+          <img src="images/u-bolt.jpeg" alt="U-bolt testing"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">U-bolt yield testing on Instron machine</p>
+        </div>
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ Motor retainer / bulkhead machined parts</span>
+          </div>
+          <p class="img-caption">6061-T6 aluminium bulkhead — Tormach CNC mill</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AVIONICS BAY -->
+    <div class="project-section">
+      <h2>Avionics bay</h2>
+      <p>
+        The avionics bay sits within a 300mm fibreglass coupler, manufactured by
+        laying fibreglass internally to a prepared body tube for a precision sliding
+        fit. Two 6061-T6 aluminium bulkheads enclose the bay, tied together by three
+        threaded rods: a central M8 rod resisting the tension from both parachute
+        attachment U-bolts, and two M4 rods preventing the sled assembly from
+        rotating between bulkheads.
+      </p>
+      <p>
+        The avionics sled was 3D printed in ABS-GF — a glass-fibre reinforced ABS
+        blend chosen for its improved structural and thermal properties over standard
+        ABS. All components mount to the sled via M3 screws into heat-insert nuts,
+        with Loctite throughout. The modular design allows individual components to
+        be removed and replaced without disturbing the rest of the bay.
+      </p>
+      <p>
+        Two entirely independent Blue Raven flight computers control the apogee and
+        main separation events, with the secondary timed 1–2 seconds after the primary
+        as a redundant backup. A Featherweight GPS system is housed in the nosecone
+        for RF transparency. Pyrotechnic connections use Wago snap connectors epoxied
+        to the avionics bulkheads, wired with a common positive and independent
+        negative leads for each charge — a clean, reliable separation from the flight
+        computer outputs.
+      </p>
+
+      <div class="img-grid-2" style="margin-top:2rem;">
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ Avionics bay — assembled sled</span>
+          </div>
+          <p class="img-caption">Avionics sled — dual Blue Raven, 9V batteries, switch mount</p>
+        </div>
+        <div>
+          <div class="img-placeholder" style="aspect-ratio:4/3;">
+            <span class="ph-label">↑ Avionics bulkhead detail</span>
+          </div>
+          <p class="img-caption">Aluminium bulkhead — threaded rods, wire passthrough, Wago connectors</p>
         </div>
       </div>
     </div>
 
     <!-- RECOVERY -->
     <div class="project-section">
-      <h2>Recovery System</h2>
+      <h2>Recovery system</h2>
       <p>
-        The recovery system was designed to functionally work everytime, as I have seen too many recovery
-        failures in high-powered rocketry. As such, a dual-separation, dual-deploy system is used, with energetics
-        responsible for the recovery events. Two chutes, a 24" drogue and a 72" main, will be deployed at apogee 
-        and 1,200 ft AGL respectively. 
+        The recovery system uses dual separation, dual deploy. At apogee, a 24" pilot
+        chute deploys to stabilise descent. At approximately 1,500 ft a 96" Fruity
+        Chutes Compact Iris deploys for landing. Separation is driven by 4F black
+        powder packed into nylon burst tubes — a method proven across multiple ARES
+        flights. A calculated 1.2g of BP per bay was increased by 0.5g and validated
+        through ground testing.
       </p>
       <p>
-        I decided to go with a recovery harness that maintains line strength and ensures repeatable deployment 
-        at any altitude. The lines are SK-75 Dyneema, 4mm, fingertrapped with 8cm loops in either end. I tested these on
-        an Instron machine, with the chosen line yielding at 27kN of force - well above anything I'd expect! The ejection charges
-        are kept in nylon tubing, allowing the energetic to fully combust and build pressure before bursting the tube and 
-        seperating the rocket.
+        Shear pin count was calculated directly from the pressure differential at
+        25,000 ft. At apogee, internal pressure exceeds external by 64.7 kPa,
+        producing 660N of force on each 114mm bulkhead. At 298N shear strength per
+        M3 nylon pin, three pins per bay are required — validated through ground
+        separation testing.
+      </p>
+      <p>
+        All recovery lines are 5mm braided SK-75 Dyneema, rated to approximately
+        3,100kg before yielding — significantly in excess of the shock loads expected
+        during chute deployment. Lines are finger-trapped and attached via soft
+        shackles to M6 316 stainless steel U-bolts at the nosecone, avionics coupler,
+        and motor retainer.
       </p>
 
       <div style="margin-top:2rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
         <div>
-          <img src="images/lines-diagram.png" alt="Recovery lines diagram" 
-               style="width:100%; height:100%; object-fit:cover; border-radius:3px; display:block;" />
-              <p class="img-caption">Lines Diagram</p>
+          <div class="img-placeholder" style="aspect-ratio:3/4;">
+            <span class="ph-label">↑ Recovery lines diagram</span>
+          </div>
+          <p class="img-caption">Recovery line routing diagram</p>
         </div>
         <div style="display:flex; flex-direction:column; gap:1rem;">
           <div>
-            <img src="images/dyneema-broken.jpeg" alt="Recovery detail" 
-                 style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
-            <p class="img-caption">Instron Tested Dyneema Samples</p>
+            <div class="img-placeholder" style="aspect-ratio:4/3;">
+              <span class="ph-label">↑ Parachute bay / recovery hardware</span>
+            </div>
+            <p class="img-caption">Main parachute bay</p>
           </div>
           <div>
-            <img src="images/lines.jpeg" alt="Recovery detail" 
-                 style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
-            <p class="img-caption">Completed Lines</p>
+            <div class="img-placeholder" style="aspect-ratio:4/3;">
+              <span class="ph-label">↑ BP burst tube / ejection charge detail</span>
+            </div>
+            <p class="img-caption">Nylon burst tube ejection charge assembly</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- AVIONICS -->
+    <!-- FINISHING -->
     <div class="project-section">
-      <h2>Avionics Bay</h2>
+      <h2>Finishing</h2>
       <p>
-        There are two avionics bays in the airframe, the GPS bay in the nosecone for RF transparancy, and the main bay 
-        connecting the two halves of the airframe. I am using a Blue Raven as primary FC, RRC3+ as secondary FC, and a Featherweight GPS. 
-        The avionics bay also has a GoPro for video logging, and an ARES Hermes v2 flight computer for data logging. 
-        The entire bay and sleds have been printed out of ABS-GF to survive Mach 2 flight conditions. 
-      </p>
-
-      <div class="img-grid-2" style="margin-top:2rem;">
-        <div>
-          <img src="images/your-photo-1.jpg" alt="Avionics bay assembled" 
-               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
-          <p class="img-caption">Your caption here</p>
-        </div>
-        <div>
-          <img src="images/gopro-porthole.jpg" alt="Gopro view" 
-               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
-          <p class="img-caption">View from GoPro inside the Airframe</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- MANUFACTURING -->
-    <div class="project-section">
-      <h2>Manufacturing</h2>
-      <p>
-        The composite airframe followed a tight manufacturing schedule, completing all structures
-        in two weeks. I decided to machine all the metallic components myself, with the avionics bulkheads
-        machined on a 3-axis CNC. This process solidifyed my understanding of toolpathing, fixturing, and setup, 
-        finishing two bulkheads in one day.  
+        After all structural work was complete, the entire airframe was bogged and
+        sanded over several days to eliminate surface imperfections from the composite
+        layups and bonding operations. The finish was taken to automotive standard
+        before painting — the paint was sponsored by DNA Custom Paints, applied with
+        custom stickers and sealed with a two-pack clear coat for durability and gloss.
       </p>
 
       <div style="margin-top:2rem;">
-        <img src="images/av-bulkheads.jpeg" alt="Avionics Bulkheads" 
-             style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:3px; display:block;" />
-        <p class="img-caption">Completed Avionics Bulkheads</p>
+        <img src="images/sagreatlachy.jpeg" alt="SA Great finished"
+             style="width:100%; aspect-ratio:16/9; object-fit:cover; object-position:center center; border-radius:3px; display:block;" />
+        <p class="img-caption">SA Great — finished and ready for flight</p>
       </div>
     </div>
 
-    <!-- PROJECT NAV -->
     <div class="project-nav">
       <a href="projects.html">← All projects</a>
       <a href="project-ares.html">ARES Hybrid Rocket →</a>
@@ -290,12 +368,25 @@
   </div>
 
   <footer class="site-footer">
-    <span class="footer-left">© 2026 Lachlan Miegel</span>
-    <ul class="footer-links">
-      <li><a href="mailto:lachy.miegel@gmail.com">Email</a></li>
-      <li><a href="https://www.linkedin.com/in/lachlan-miegel-b42b261a9/" target="_blank">LinkedIn</a></li>
-      <li><a href="#top">Top</a></li>
-    </ul>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Lachlan Miegel</div>
+        <div class="footer-desc">Mechanical Engineering · University of Melbourne · Hansen Scholar</div>
+        <div class="footer-contact">
+          <a href="mailto:lachy.miegel@gmail.com">lachy.miegel@gmail.com</a>
+          <a href="https://www.linkedin.com/in/lachlan-miegel-b42b261a9/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-links">
+          <li><a href="index.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="mailto:lachy.miegel@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 Lachlan Miegel</div>
   </footer>
 
 </body>
