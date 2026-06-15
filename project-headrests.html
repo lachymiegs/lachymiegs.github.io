@@ -73,9 +73,13 @@
     </div>
   </div>
 
-  <div style="max-width:var(--wide); margin:0 auto; padding:2.5rem 3rem;">
-    <div class="img-placeholder" style="aspect-ratio:16/7;">
-      <span class="ph-label">↑ Replace with: finished headrests on the vehicle, or best build photo</span>
+  <div style="max-width:var(--wide); margin:0 auto; padding:1rem 3rem;">
+    <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+      <img src="images/trike.jpg" alt="Pedal Prix Vehicle"
+           style="width:100%; aspect-ratio:16/9; object-fit:cover; object-position:center center; display:block; transition:transform 0.3s ease;"
+           onmouseover="this.style.transform='scale(1.03)'"
+           onmouseout="this.style.transform='scale(1)'" />
+      <div class="highlight-caption">The Pedal Prix vehicle fitted with custom headrest</div>
     </div>
   </div>
 
@@ -83,51 +87,47 @@
 
     <!-- THE PROBLEM -->
     <div class="project-section">
-      <h2>The problem</h2>
+      <h2>The Problem</h2>
       <p>
-        In Year 12 our Pedal Prix team needed custom headrests — shaped to fit the
-        driver, light enough to not hurt performance, and strong enough to be safe.
-        Off-the-shelf parts didn't fit. We had no budget for professional fabrication.
-        And I had never made a composite part in my life.
+        In Year 12, I was struggling to fit in our Pedal Prix vehicles, hurt by the fact the OEM 
+        headrest was not equipped for taller riders due to the space it took up. I needed a
+        headrest that could be custom-shaped to my body, light, and stiff. Composites was the 
+        solution, but I had no experience nor access.
       </p>
       <p>
-        The two problems I had to solve were related but distinct: I needed a way to
-        produce a mould that accurately contoured to a human body without access to
+        I needed a way to produce a mould that accurately contoured to my body without access to
         CNC machining or proper mould-making materials, and I needed to learn vacuum
-        bagging from scratch — in a garage, with whatever I could source locally.
+        bagging from scratch, whether in a garage, or whatever I could source locally.
       </p>
 
-      <blockquote>
-        I didn't know how to make composite parts. So I figured it out.
-      </blockquote>
     </div>
 
     <!-- THE MOULD -->
     <div class="project-section">
-      <h2>Making the mould</h2>
+      <h2>Making the Mould</h2>
       <p>
-        [ Describe your body-casting approach in detail — what materials you used,
-        how you captured the geometry, what you had to iterate on. What went wrong
-        the first time? What was the specific insight that made it work? ]
+        To make the mould, I found some 3mm acryllic at school, lasercut it into a ballpark 2D 
+        shape, and then using a head gun moulded it to my body. I took the OEM headrest, 
+        and traced its bolt pattern onto my template to ensure the new headrest would fit the existing mounting points.
+        The first mould was too flimsy, the integrated mud guard would bounce and scrub on the rear wheel.
       </p>
       <p>
-        [ Be specific and honest here — this section is compelling precisely because
-        it was improvised and resourceful. Don't understate the constraints you
-        were working under. ]
+        My next iterations followed the same process, lasercut, heat gun moulding, and then I shifted my focus
+        into removing the flimsy mud guard, by adding a notched profile - all done by hand. The final headrest,
+        perfectly moulded to my body, and made with no budget, I found a moulding solution that worked. 
+
       </p>
 
       <div class="img-grid-2">
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Mould — any photo of the process</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
+          <img src="images/v1-mould.jpeg" alt="First Mould Iteration"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">First mould iteration with flimsy integrated mud guard</p>
         </div>
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Mould detail or material prep</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
+          <img src="images/v3-mould.jpeg" alt="Third Mould Iteration"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Third mould iteration with notched profile, improved contour</p>
         </div>
       </div>
     </div>
@@ -137,62 +137,50 @@
       <h2>Teaching myself vacuum bagging</h2>
       <p>
         I learned vacuum bagging entirely from online resources and trial and error.
-        The core variables I had to get right were bag sealing, resin ratios, and
-        the layup schedule. I worked through these iteratively — the first attempts
-        weren't right, but each one taught me something specific.
+        I taught myself quickly about correct mixture ratios, the required consumables, and 
+        post processing. The hardest part was getting a bag to seal up without dropping 
+        hundreds of dollars on a quality pump and bagging materials. I used an old fridge pump from a family friend
+        and to seal the bag, rolled the end over a few times with clamps to seal it up.
       </p>
       <p>
-        [ Describe what you got wrong early on and what you learned from it.
-        What was the specific fix? What did the first successful part feel like
-        compared to the failed attempts? ]
+        My first attempt was \(somehow) a success, using twill carbon on the inner and outer layers, 
+        sandwiching chopstrand fibreglass in between for thickness. I learned that adding the chopstrand was
+        largely adding weight and no strength, so for my next ones, and to help negate the flimsy mud guard, 
+        I added uni-carbon between the twill layers, and some thicker bi-axial weave to bulk it out. 
       </p>
 
       <div style="margin-top:2rem;">
-        <div class="img-placeholder" style="aspect-ratio:16/9;">
-          <span class="ph-label">↑ Vacuum bagging process — bag, pump, layup under vacuum</span>
-        </div>
-        <p class="img-caption">[ Caption ]</p>
+        <img src="images/vacbag-headrest.jpeg" alt="Vacuum Bagged Headrest"
+               style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Headrest under vac</p>
       </div>
     </div>
 
     <!-- RESULT -->
     <div class="project-section">
-      <h2>The result — and what came after</h2>
+      <h2>The result... and what came afterr</h2>
       <p>
-        The parts fitted correctly and flew on the competition vehicle. For a first
-        attempt at vacuum-bagged composites in a garage, that was the only metric
-        that mattered.
+        The third iteration was a success, I tested it on training days, and raced it at the 24-hour
+        race. For a first attempt at vacuum-bagged composites, I was 
+        thrilled to have a functional part that fitted the vehicle and performed well. 
       </p>
       <p>
         What I didn't expect was that solving this problem would define the next
-        three years of my engineering work. The same skills — wet layup, vacuum
-        bagging, iterative process development under constraints — now underpin
+        three years of my engineering work. The same skills, wet layup, vacuum
+        bagging, iterative process development under tight constraints, now underpin
         structural work on vehicles targeting Mach 2 and beyond. My most advanced
-        current composites work is a co-cured carbon sleeve architecture for a
-        Mach 3.5 record-attempt rocket.
-      </p>
-      <p>
-        It started because I needed headrests for a push-bike race.
+        current composites work is developing a co-cured carbon fin-can for a Mach 3.5 record-attempt rocket.
       </p>
 
-      <div class="img-grid-2" style="margin-top:2rem;">
-        <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Finished headrest parts</span>
-          </div>
-          <p class="img-caption">Finished parts — [ add detail ]</p>
-        </div>
-        <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Parts on vehicle / race day</span>
-          </div>
-          <p class="img-caption">Fitted on the Pedal Prix vehicle</p>
-        </div>
+      <div style="margin-top:2rem;">
+        <img src="images/headrest.jpg" alt="Final Composite Headrest"
+               style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Second iteration headrest fitted to a trike</p>
       </div>
     </div>
 
     <div class="project-nav">
-      <a href="project-ares.html">← ARES Hybrid Rocket</a>
+      <a href="project-lemaire.html">← ARES Project Lemaire</a>
       <a href="projects.html">All projects →</a>
     </div>
 
