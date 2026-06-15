@@ -35,18 +35,19 @@
       </div>
       <h1>Project Lemaire</h1>
       <p class="project-hero-desc">
-        ARES Rocketry's competition entry at the International Rocket Engineering
-        Competition in Texas, June 2025. Flying on an O5500 solid motor targeting
-        30,000 ft. I designed and built a large proportion of the fin can and airframe
-        as Structures Lead.
+        ARES Rocketry's 2025 IREC competition entry, flying on an O5500X to 30,000 ft.
+        Named after Diane Adrienne Lemaire, the first female engineering graduate at the University of Melbourne.
+        I led the structures team, responsible for the entire rocket design and manufacturing, including all internal
+        bulkheads and interfaces.
+        4th in category, 35th overall.
       </p>
     </div>
   </div>
 
-  <div style="max-width:var(--wide); margin:0 auto; padding:2.5rem 3rem;">
-    <div class="img-placeholder" style="aspect-ratio:16/7;">
-      <span class="ph-label">↑ Replace with: best photo of Lemaire — on the rail, at the launch site, or in the workshop</span>
-    </div>
+  <!-- HERO IMAGE -->
+  <div style="max-width:var(--wide); margin:0 auto; padding:0 3rem;">
+    <img src="images/irec_sunrise.JPG" alt="Project Lemaire"
+         style="width:100%; aspect-ratio:16/7; object-fit:cover; object-position:center center; border-radius:3px; display:block;" />
   </div>
 
   <div class="project-content">
@@ -57,22 +58,29 @@
         <div>
           <h2>Overview</h2>
           <p>
-            Project Lemaire was ARES Rocketry's entry in the 30,000 ft COTS category
-            at IREC 2025 — one of the world's largest university rocketry competitions,
-            held at Spaceport America, New Mexico. The vehicle flew on an
-            <strong>O5500</strong>, one of the highest-impulse commercially available
-            solid rocket motors.
+            Project Lemaire built directly on Project Florence, ARES' highly successful
+            2024 IREC entry. The airframe retained Florence's 145.2mm diameter,
+            the smallest diameter that accommodates a 3U payload internally, and flew
+            on the <strong>O5500X</strong>, one of the most powerful commercially
+            available solid rocket motors and one with a well-earned reputation for
+            killing rockets.
           </p>
           <p>
-            We placed <strong>4th in category</strong> and 35th overall. The flight
-            itself didn't go to plan — more on that below — but the 4th in category
-            result reflects the technical quality of the build, which is judged
-            independently of flight performance.
+            At IREC 2025, about one in two O5500-wielding rockets either suffered
+            a motor failure or couldn't withstand the huge boost off the rod.
+            Lemaire's composite structures held up, a direct result of the fin can
+            architecture developed across Florence and refined for Lemaire.
+          </p>
+          <p>
+            The competition result of <strong>4th in category</strong> reflects the
+            technical quality of the build, judged independently of flight performance.
+            The structures work did exactly what it was designed to do.
           </p>
         </div>
         <div class="spec-panel">
           <table class="spec-table">
-            <tr><td>Motor</td><td>O5500</td></tr>
+            <tr><td>Motor</td><td>O5500X</td></tr>
+            <tr><td>Airframe ID</td><td>145.2 mm</td></tr>
             <tr><td>Target altitude</td><td>30,000 ft</td></tr>
             <tr><td>Category</td><td>30k COTS</td></tr>
             <tr><td>Competition</td><td>IREC 2025, Texas</td></tr>
@@ -84,44 +92,71 @@
       </div>
     </div>
 
-    <!-- STRUCTURES WORK -->
+    <!-- FIN CAN -->
     <div class="project-section">
-      <h2>Structures work</h2>
+      <h2>Fin can</h2>
       <p>
-        As Structures Lead I was responsible for the fin can design and a large
-        proportion of the airframe manufacturing. The O5500 is a serious motor —
-        high thrust, high impulse, demanding flight environment — and the fin can
-        had to be built to match.
+        The fin can was the centrepiece of my structures work on Lemaire, and the
+        component I am most proud of from the entire build. The goal was twofold:
+        build the strongest fin can to survive O5500X flight conditions, and produce
+        the best looking fins at the competition. Both objectives were met.
       </p>
       <p>
-        [ Describe the fin can design in detail — geometry, material, attachment
-        method, manufacturing process. What made it technically challenging?
-        What were you trying to achieve with the build quality? ]
+        The fins use a full through-wall construction, mounted directly to the 98mm
+        motor tube. Leading and trailing edges were hand blended for an ultra-clean
+        aerodynamic profile, more work than standard chamfering, but the result speaks
+        for itself. Structural fillets were applied using Epikote MGS BPR 135 bonding
+        paste in the same manner as my L3 fin can, then finished with a tip-to-tip
+        carbon layup to tie everything together and maximise root chord strength.
       </p>
       <p>
-        [ Describe the airframe sections you manufactured — materials, processes,
-        tolerances, any fit-up challenges with other subteams' components. ]
+        Lemaire also features a <strong>boat tail</strong>, a tapered aft section
+        that reduces base drag and gives the rocket a cleaner aerodynamic profile.
+        The compliments from other teams at competition for the fin work were
+        genuinely unreal.
       </p>
 
-      <div style="margin-top:2rem;">
-        <div class="img-placeholder" style="aspect-ratio:16/9;">
-          <span class="ph-label">↑ Fin can — fabricated hardware, ideally a clean workshop shot</span>
+      <div class="img-grid-2" style="margin-top:2rem;">
+        <div>
+          <img src="images/lem_prebag.jpeg" alt="Lemaire fin can"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">The fin can ready for tip-to-tip</p>
         </div>
-        <p class="img-caption">[ Caption — fin can detail ]</p>
+        <div>
+          <img src="images/lem-fincan.jpeg" alt="Lemaire boat tail"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Freshly debagged fins before final finishing</p>
+        </div>
       </div>
+    </div>
 
-      <div class="img-grid-2" style="margin-top:0.75rem;">
+    <!-- AVIONICS BAY -->
+    <div class="project-section">
+      <h2>Avionics bay</h2>
+      <p>
+        The avionics bay was a good design challenge, cramming a significant amount
+        of hardware into a tightly constrained space while maintaining accessibility
+        and reliability. The bay had to house two commercial flight computers, a
+        commercial GPS, ARES' own custom flight computer and GPS system, and a CAN bus
+        harness running the length of the rocket.
+      </p>
+      <p>
+        The CO2 canister mounting for the sliding coupler recovery system required
+        creative packaging, and finding space for the magnetic arming switches within
+        the envelope added further constraint. The solution was a parametrically designed, SLS nylon printed
+        sled, resulting in the most compact avionics bay ARES has produced to date.
+      </p>
+
+      <div class="img-grid-2" style="margin-top:2rem;">
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Airframe manufacturing detail</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
+          <img src="images/irec_display.JPG" alt="Lemaire avionics bay"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">The completed avionics bay in the foreground with recovery system attached</p>
         </div>
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Fin attachment / interface detail</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
+          <img src="images/av-bay.jpeg" alt="Lemaire avionics detail"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Fresh SLS Nylon avionics bay and sleds ready for avionics attachment</p>
         </div>
       </div>
     </div>
@@ -130,16 +165,30 @@
     <div class="project-section">
       <h2>IREC 2025</h2>
       <p>
-        [ Describe the competition experience — what IREC involves, the scale of it,
-        the inspection process. What was it like taking the rocket to Texas?
-        What did the judges say about the build? ]
+        IREC was an incredible experience. The Australian contingent punched well above
+        their weight, every Aussie team had the best looking rockets at the competition
+        by an absolute long shot, and the standard of engineering on display was something
+        to be proud of. The competition was as much about seeing how other teams approached
+        design challenges as it was about the results, the camaraderie between teams from
+        across the world made it very memorable.
+      </p>
+      <p>
+        The technical inspection process at IREC is rigorous, and the 4th in category
+        result is a reflection of how Lemaire performed against that standard — independently
+        of what happened in the air.
       </p>
 
-      <div style="margin-top:2rem;">
-        <div class="img-placeholder" style="aspect-ratio:16/9;">
-          <span class="ph-label">↑ Launch day — Lemaire on the rail at Spaceport America</span>
+      <div class="img-grid-2" style="margin-top:2rem;">
+        <div>
+          <img src="images/placeholder.jpeg" alt="IREC 2025"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">ARES team at IREC 2025 — Spaceport America, New Mexico</p>
         </div>
-        <p class="img-caption">Launch day, IREC 2025 — Spaceport America, New Mexico</p>
+        <div>
+          <img src="images/placeholder.jpeg" alt="Lemaire at IREC"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Lemaire on the rail — launch day</p>
+        </div>
       </div>
     </div>
 
@@ -147,42 +196,103 @@
     <div class="project-section">
       <h2>The flight</h2>
       <p>
-        Lemaire banked hard off the rod shortly after launch and undershot the
-        target altitude significantly, causing a parachute deployment failure.
-        It wasn't the flight we had prepared for.
+        After a relatively successful test flight campaign — bounded by altitude
+        restrictions at our test site — the flight at IREC was disappointing. Lemaire
+        banked hard off the rod, ripping the main chute free at apogee and landing hard.
+        Not the flight we had prepared for.
       </p>
       <p>
-        [ Describe what happened in more detail — what you think caused the rod
-        departure, what the failure sequence looked like, what the post-flight
-        analysis showed. What did you take from it? What would you do differently? ]
+        The post-flight picture was telling though. The fin can survived intact — fins
+        firmly attached, composite work undamaged. It was the extension tube that failed,
+        suffering a zippering from the shock cord during the anomalous descent. The
+        structures held up where it mattered most.
       </p>
       <p>
-        The 4th in category result reflects the technical quality of the build
-        judged independently of flight performance. The structures work held up —
-        the anomaly was elsewhere in the system.
+        The O5500X's notorious punch factor off the rod combined with the attitude
+        restrictions that limited our test campaign meant we were flying into conditions
+        we hadn't been able to fully validate. That's a lesson carried forward into
+        every program since.
       </p>
 
       <div class="img-grid-2" style="margin-top:2rem;">
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Launch sequence photo</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
+          <img src="images/placeholder.jpeg" alt="Lemaire launch"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Launch sequence — O5500X ignition</p>
         </div>
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Post-flight or recovery photo</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
+          <img src="images/placeholder.jpeg" alt="Lemaire post flight"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Post-flight — fin can intact, extension tube zippering visible</p>
         </div>
       </div>
     </div>
 
+  </div>
+
+  <!-- PHOTO HIGHLIGHTS — 3x2 grid, full wide width -->
+  <div style="max-width:var(--wide); margin:0 auto; padding:0 3rem 3rem;">
+    <div style="padding:2rem 0 1.5rem; border-top:1px solid var(--rule);">
+      <h2>Highlights</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem;">
+
+      <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+        <img src="images/lachlanmiegelrocket.jpeg" alt="Highlight 1"
+             style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.03)'"
+             onmouseout="this.style.transform='scale(1)'" />
+        <div class="highlight-caption">Loading up Test Lemaire on the rail at an Australian launch</div>
+      </div>
+
+      <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+        <img src="images/me_lem_carry.JPG" alt="Highlight 2"
+             style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.03)'"
+             onmouseout="this.style.transform='scale(1)'" />
+        <div class="highlight-caption">Carrying Lemaire at IREC ready for launch</div>
+      </div>
+
+      <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+        <img src="images/me_lem.JPG" alt="Highlight 3"
+             style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.03)'"
+             onmouseout="this.style.transform='scale(1)'" />
+        <div class="highlight-caption">Me and Lemaire before heading out to the States</div>
+      </div>
+
+      <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+        <img src="images/structures.JPG" alt="Highlight 4"
+             style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.03)'"
+             onmouseout="this.style.transform='scale(1)'" />
+        <div class="highlight-caption">The Structures Team!</div>
+      </div>
+
+      <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+        <img src="images/team-tower.JPG" alt="Highlight 5"
+             style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.03)'"
+             onmouseout="this.style.transform='scale(1)'" />
+        <div class="highlight-caption">Lemaire loaded up on her 5m rail under the Texan sun</div>
+      </div>
+
+      <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+        <img src="images/lem-on-rail.jpeg" alt="Highlight 6"
+             style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.03)'"
+             onmouseout="this.style.transform='scale(1)'" />
+        <div class="highlight-caption">35kg of Lemaire and O5500 ready to rip a hole in the sky</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="project-content">
     <div class="project-nav">
       <a href="project-ares.html">← ARES Hybrid Rocket</a>
       <a href="project-headrests.html">Pedal Prix Headrests →</a>
     </div>
-
   </div>
 
   <footer class="site-footer">
