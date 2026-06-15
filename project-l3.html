@@ -24,18 +24,18 @@
       <div class="breadcrumb">
         <a href="projects.html">Projects</a>
         <span>—</span>
-        <span>Project SA Great</span>
+        <span>SA Great</span>
       </div>
       <div class="tags" style="margin-bottom:1rem;">
         <span class="tag">Tripoli L3</span>
         <span class="tag">Solo build</span>
         <span class="tag">Mach 2</span>
-        <span class="tag">25,000 ft</span>
+        <span class="tag">24,000 ft</span>
         <span class="tag gold">Flight 2026</span>
       </div>
       <h1>Project SA Great</h1>
       <p class="project-hero-desc">
-        A complete Mach 2 sounding rocket targeting 25,000 ft, designed and built
+        A complete Mach 2 sounding rocket targeting 24,000 ft, designed and built
         entirely by me as my Tripoli Level 3 certification vehicle. Every primary
         structure, recovery assembly, and avionics integration is my own work.
         Documentation complete, rocket built, awaiting a CASA launch window.
@@ -44,7 +44,7 @@
   </div>
 
   <!-- HERO IMAGE -->
-  <div style="max-width:var(--wide); margin:0 auto; padding:2.5rem 3rem;">
+  <div style="max-width:var(--wide); margin:0 auto; padding:1rem 3rem;">
     <img src="images/wireframe.png" alt="Project SA Great Wireframe"
          style="width:100%; aspect-ratio:16/4; object-fit:cover; object-position:center center; border-radius:3px; display:block;" />
   </div>
@@ -61,7 +61,7 @@
             <strong>AeroTech N3300R</strong> — 13,410 N·s total impulse, 4.1 second
             burn, peak thrust of 4,226 N. At motor burnout the airframe will have
             experienced approximately 28G. The vehicle is designed to reach Mach 2
-            and 25,000 ft on a dual separation, dual deploy recovery system.
+            and 24,000 ft on a dual separation, dual deploy recovery system.
           </p>
           <p>
             The choice of an N3300 is a reflection of the availability of large solid
@@ -221,19 +221,15 @@
     <div class="project-section">
       <h2>Machined Components</h2>
       <p>
-        All aluminium components were machined by me personally. The bulkheads —
-        four in total across the avionics bay and recovery interfaces — were milled
-        on a Tormach CNC mill. The GPS bulkhead, epoxy ring, and motor retainer were
+        All aluminium components were machined by me personally. The avionics bulkheads were milled
+        on a Tormach CNC mill, one for each end of the dual separation bay. The GPS bulkhead, epoxy ring, and motor retainer were
         turned on a manual lathe.
       </p>
       <p>
         The motor retainer is a 6061-T6 aluminium component that closes the aft end
         of the airframe. It attaches radially using 12 M5 countersunk screws into the
         body tube, and is designed to support the mass of the motor on the pad whilst
-        preventing the casing from sliding free after burnout. The 12-bolt pattern
-        provides approximately 80kg of holding force — well in excess of the motor
-        mass. Thrust transfers through the airframe via the aft enclosure interfacing
-        directly with the motor tube, not through the retainer itself.
+        preventing the casing from sliding free after burnout.
       </p>
 
       <div class="img-grid-2" style="margin-top:2rem;">
@@ -243,10 +239,10 @@
           <p class="img-caption">U-bolt yield testing on Instron machine</p>
         </div>
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Motor retainer / bulkhead machined parts</span>
+         <img src="images/av-bulkheads.jpeg" alt="Avionics Bulkheads"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
           </div>
-          <p class="img-caption">6061-T6 aluminium bulkhead — Tormach CNC mill</p>
+          <p class="img-caption">6061-T6 avionics bulkhead from a Tormach CNC</p>
         </div>
       </div>
     </div>
@@ -257,26 +253,28 @@
       <p>
         The avionics bay sits within a 300mm fibreglass coupler, manufactured by
         laying fibreglass internally to a prepared body tube for a precision sliding
-        fit. Two 6061-T6 aluminium bulkheads enclose the bay, tied together by three
-        threaded rods: a central M8 rod resisting the tension from both parachute
+        fit. The two avionics bulkheads enclose the bay, tied together by three
+        threaded rods, a central M8 rod resisting the tension from both parachute
         attachment U-bolts, and two M4 rods preventing the sled assembly from
         rotating between bulkheads.
       </p>
       <p>
-        The avionics sled was 3D printed in ABS-GF — a glass-fibre reinforced ABS
+        The avionics sled was 3D printed in ABS-GF, a glass-fibre reinforced ABS
         blend chosen for its improved structural and thermal properties over standard
-        ABS. All components mount to the sled via M3 screws into heat-insert nuts,
+        ABS or PLA. All components mount to the sled via M3 screws into heat-insert nuts,
         with Loctite throughout. The modular design allows individual components to
-        be removed and replaced without disturbing the rest of the bay.
+        be removed and replaced without disturbing the rest of the bay. The bay also houses
+        a GoPro to capture flight footage.
       </p>
       <p>
-        Two entirely independent Blue Raven flight computers control the apogee and
-        main separation events, with the secondary timed 1–2 seconds after the primary
-        as a redundant backup. A Featherweight GPS system is housed in the nosecone
+        Two entirely independent flight computers control the apogee and
+        main separation events, with the secondary timed 1 second after the primary
+        as a redundant backup. This is a requirement of Tripoli Level 3 Certification rockets, 
+        with each system being fully independent including switch and battery. 
+        A Featherweight GPS system is housed in the nosecone
         for RF transparency. Pyrotechnic connections use Wago snap connectors epoxied
-        to the avionics bulkheads, wired with a common positive and independent
-        negative leads for each charge — a clean, reliable separation from the flight
-        computer outputs.
+        to the avionics bulkheads, wired with independent positive and
+        negative leads for each charge, four charges total.
       </p>
 
       <div class="img-grid-2" style="margin-top:2rem;">
@@ -300,47 +298,37 @@
       <h2>Recovery system</h2>
       <p>
         The recovery system uses dual separation, dual deploy. At apogee, a 24" pilot
-        chute deploys to stabilise descent. At approximately 1,500 ft a 96" Fruity
-        Chutes Compact Iris deploys for landing. Separation is driven by 4F black
-        powder packed into nylon burst tubes — a method proven across multiple ARES
+        chute deploys to stabilise descent. At approximately 1,200 ft a 72" Fruity
+        Chutes Compact Iris deploys for landing. Separation is driven by black
+        powder packed into nylon burst tubes, a method proven across multiple ARES
         flights. A calculated 1.2g of BP per bay was increased by 0.5g and validated
         through ground testing.
       </p>
       <p>
         Shear pin count was calculated directly from the pressure differential at
-        25,000 ft. At apogee, internal pressure exceeds external by 64.7 kPa,
+        24,000 ft. At apogee, internal pressure exceeds external by 64.7 kPa,
         producing 660N of force on each 114mm bulkhead. At 298N shear strength per
-        M3 nylon pin, three pins per bay are required — validated through ground
+        M3 nylon pin, three pins per bay are required, further validated through ground
         separation testing.
       </p>
       <p>
         All recovery lines are 5mm braided SK-75 Dyneema, rated to approximately
-        3,100kg before yielding — significantly in excess of the shock loads expected
+        3,100kg before yielding, significantly in excess of the shock loads expected
         during chute deployment. Lines are finger-trapped and attached via soft
         shackles to M6 316 stainless steel U-bolts at the nosecone, avionics coupler,
         and motor retainer.
       </p>
 
-      <div style="margin-top:2rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+      <div class="img-grid-2" style="margin-top:2rem;">
         <div>
-          <div class="img-placeholder" style="aspect-ratio:3/4;">
-            <span class="ph-label">↑ Recovery lines diagram</span>
-          </div>
-          <p class="img-caption">Recovery line routing diagram</p>
+          <img src="images/lines-diagram.png" alt="Lines Diagram"
+               style="width:100%; aspect-ratio:3/5; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Lines diagram of parachute deployment</p>
         </div>
-        <div style="display:flex; flex-direction:column; gap:1rem;">
-          <div>
-            <div class="img-placeholder" style="aspect-ratio:4/3;">
-              <span class="ph-label">↑ Parachute bay / recovery hardware</span>
-            </div>
-            <p class="img-caption">Main parachute bay</p>
-          </div>
-          <div>
-            <div class="img-placeholder" style="aspect-ratio:4/3;">
-              <span class="ph-label">↑ BP burst tube / ejection charge detail</span>
-            </div>
-            <p class="img-caption">Nylon burst tube ejection charge assembly</p>
-          </div>
+        <div>
+          <img src="images/lines.jpeg" alt="Lines"
+               style="width:100%; aspect-ratio:3/5; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Completed Dyneema lines, spliced and finger trapped</p>
         </div>
       </div>
     </div>
@@ -352,14 +340,42 @@
         After all structural work was complete, the entire airframe was bogged and
         sanded over several days to eliminate surface imperfections from the composite
         layups and bonding operations. The finish was taken to automotive standard
-        before painting — the paint was sponsored by DNA Custom Paints, applied with
+        before painting, the paint was sponsored by DNA Custom Paints, applied with
         custom stickers and sealed with a two-pack clear coat for durability and gloss.
+        A paint job entirely done at my University's spray booth with only rattle cans, a lot of 
+        filler primer, and too many hours learning paint prep techniques - this is SA Great.
       </p>
+    </div>
 
-      <div style="margin-top:2rem;">
-        <img src="images/sagreatlachy.jpeg" alt="SA Great finished"
-             style="width:100%; aspect-ratio:16/9; object-fit:cover; object-position:center center; border-radius:3px; display:block;" />
-        <p class="img-caption">SA Great — finished and ready for flight</p>
+  <!-- PHOTO HIGHLIGHTS -->
+    <div class="project-section">
+      <h2>Highlights</h2>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; margin-top:1.5rem;">
+    
+        <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+          <img src="images/sa_paintshopjpeg" alt="Highlight 1"
+               style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;" 
+               onmouseover="this.style.transform='scale(1.03)'" 
+               onmouseout="this.style.transform='scale(1)'" />
+          <div class="highlight-caption">Still wet from the paint</div>
+        </div>
+    
+        <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+          <img src="images/sa_unfinished" alt="Highlight 2"
+               style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+               onmouseover="this.style.transform='scale(1.03)'"
+               onmouseout="this.style.transform='scale(1)'" />
+          <div class="highlight-caption">The basic airframe completed, awaiting tip-to-tip</div>
+        </div>
+    
+        <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+          <img src="images/l1l2l3.jpeg" alt="Highlight 3"
+               style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+               onmouseover="this.style.transform='scale(1.03)'"
+               onmouseout="this.style.transform='scale(1)'" />
+          <div class="highlight-caption">My Level 1, Level 2, and Level 3 rockets lined up before an ARES presentation</div>
+        </div>
+    
       </div>
     </div>
 
