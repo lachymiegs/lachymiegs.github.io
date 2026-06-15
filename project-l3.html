@@ -45,8 +45,8 @@
 
   <!-- HERO IMAGE -->
   <div style="max-width:var(--wide); margin:0 auto; padding:2.5rem 3rem;">
-    <img src="images/sagreat.jpeg" alt="Project SA Great"
-         style="width:100%; aspect-ratio:2/3; object-fit:cover; object-position:center top; border-radius:3px; display:block;" />
+    <img src="images/wireframe.png" alt="Project SA Great Wireframe"
+         style="width:100%; aspect-ratio:16/4; object-fit:cover; object-position:center center; border-radius:3px; display:block;" />
   </div>
 
   <div class="project-content">
@@ -64,15 +64,16 @@
             and 25,000 ft on a dual separation, dual deploy recovery system.
           </p>
           <p>
-            The build philosophy was to scratch-build as much as possible. The only
-            significant COTS components are the body tubes, flight computers,
-            parachutes, and GPS — everything else was designed and made by me.
-            This includes all bulkheads, the motor tube, fin can assembly, nosecone,
-            avionics bay, motor retainer, and recovery hardware.
+            The choice of an N3300 is a reflection of the availability of large solid
+            rocket motors in Australia currently. As such, I had to build a rocket around what 
+            I could find (and try to maximise performance in the process!), resulting in
+            what a Mach 2 flight vehicle, putting my design and manufacturing skills to the ultimate test.
           </p>
           <p>
-            For a solo build, a rocket of this scale is the equivalent of what ARES
-            produces as a full team over a year. It was completed in a matter of weeks.
+            The goal of the airframe was to scratch-build as much as possible. The only
+            significant COTS components are the body tubes, parachutes, and avionics - everything else was designed and made by me.
+            This includes all bulkheads, the motor tube, fin can assembly, nosecone,
+            avionics bay, motor retainer, and recovery hardware.
           </p>
           <a href="docs/sa-great-technical-report.pdf"
              style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-light); text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:2px;">
@@ -82,19 +83,16 @@
         <div class="spec-panel">
           <table class="spec-table">
             <tr><td>Motor</td><td>AeroTech N3300R</td></tr>
-            <tr><td>Total impulse</td><td>13,410 N·s</td></tr>
-            <tr><td>Peak thrust</td><td>4,226 N</td></tr>
-            <tr><td>Burn time</td><td>4.1 s</td></tr>
-            <tr><td>Target altitude</td><td>25,000 ft</td></tr>
-            <tr><td>Max velocity</td><td>Mach 2</td></tr>
+            <tr><td>Total Impulse</td><td>13,410 N·s</td></tr>
+            <tr><td>Burn Time</td><td>4.1 s</td></tr>
+            <tr><td>Target Altitude</td><td>25,000 ft</td></tr>
+            <tr><td>Max Velocity</td><td>Mach 2</td></tr>
             <tr><td>Max G-force</td><td>~28 G</td></tr>
             <tr><td>Airframe ID</td><td>114 mm (4.5")</td></tr>
             <tr><td>Length</td><td>2,550 mm</td></tr>
-            <tr><td>Motor mount</td><td>98 mm</td></tr>
-            <tr><td>Fins</td><td>4 × carbon plate</td></tr>
             <tr><td>Recovery</td><td>Dual sep. dual deploy</td></tr>
             <tr><td>Certification</td><td>Tripoli Level 3</td></tr>
-            <tr><td>Status</td><td>Built, awaiting CASA window</td></tr>
+            <tr><td>Status</td><td>Built, awaiting CASA approval</td></tr>
           </table>
         </div>
       </div>
@@ -104,68 +102,73 @@
     <div class="project-section">
       <h2>Airframe</h2>
       <p>
-        The airframe is of full composite construction — roll-wrapped carbon body
-        tubes, carbon plate fins and centering rings, in-house carbon motor tube,
+        The airframe is a full composite construction, roll-wrapped carbon body
+        tubes, carbon plate fins, in-house carbon motor tube,
         fibreglass coupler and nosecone, and 6061-T6 aluminium bulkheads throughout.
       </p>
       <p>
-        Body tubes were sourced from China to specification — roll-wrapped carbon,
-        three 800mm sections. Two sections were bonded internally to form the 1600mm
-        booster tube; purchasing a single tube at that length would have incurred
-        prohibitive shipping costs. The third section forms the upper airframe.
+        Body tubes are COTS, made to my requirements. These are roll-wrapped carbon,
+        three 800mm sections with 1.8mm wall thickness. Two sections were bonded internally to form the 1600mm
+        booster tube as purchasing a single tube at that length would have significantly increased shipping. 
+        The third section forms the upper airframe.
       </p>
 
       <div class="img-grid-2" style="margin-top:2rem;">
         <div>
           <img src="images/sa-great-nc.JPG" alt="SA Great airframe"
                style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
-          <p class="img-caption">Completed airframe — nosecone and booster assembly</p>
+          <p class="img-caption">Completed airframe — nosecone assembly</p>
         </div>
         <div>
           <img src="images/sa-great-fins.JPG" alt="SA Great fins"
                style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
-          <p class="img-caption">Carbon plate fins — double diamond profile for Mach 2 flight</p>
+          <p class="img-caption">Fin can — double diamond profile for Mach 2 flight</p>
         </div>
       </div>
     </div>
 
     <!-- FIN CAN -->
     <div class="project-section">
-      <h2>Fin can</h2>
+      <h2>Fin Can</h2>
       <p>
-        Fins were waterjet cut from 5mm carbon plate, then hand chamfered on a belt
-        sander to a double diamond profile — optimised for high altitude, high velocity
-        flight to minimise wave drag. The motor tube was manufactured in-house: wet
-        laid onto a mandrel, then post-cured.
+        Fins were hand cut from 5mm carbon plate, then chamfered on a belt
+        sander to a double diamond profile, optimised for high altitude, high velocity
+        flight to minimise drag. The motor tube was manufactured in-house, wet
+        laid onto a mandrel, for a rapid turnaround.
       </p>
       <p>
         A custom fin jig was laser cut from 6mm MDF, designed so all four fins could
         be tacked onto the motor tube simultaneously and held in precise alignment
         during cure. After the initial tack bond using Epikote MGS BPR 135 bonding
         paste, larger structural fillets were added between each fin and the motor
-        tube, and waterjet cut centering rings were bonded at equidistant spacing.
+        tube, and lasercut cut centering rings were bonded at equidistant spacing.
+      </p>
+      <p>
+        The aft-most centering ring provides the interface for how thrust is transmitted through the airframe,
+        that is pushing through the fin can into the airframe, rather than into the motor retainer. To reinforce this region,
+        extra care was taken around the aft centering ring bond to the fins and outer airframe
+        to ensure the N3300 does not rip through the rocket.
       </p>
       <p>
         The fin can was then slid into slotted sections of the booster tube and bonded
-        with 25mm radius structural fillets of the same paste — large enough to
+        with 25mm radius structural fillets of the same paste, large enough to
         distribute the fin root loads across the tube wall effectively. The assembly
-        was finished with a tip-to-tip carbon layup: four layers, wet laid and vacuum
+        was finished with a tip-to-tip carbon layup, four layers, wet laid and vacuum
         bagged, staggered from small to large to prioritise root chord strength where
-        loads are highest. This added approximately 0.8–1.6mm of thickness, bringing
-        the fin flutter velocity to approximately Mach 2.6 — a comfortable margin above
+        loads are highest. This added approximately 0.8–1.6mm of tapered thickness, bringing
+        the fin flutter velocity to approximately Mach 2.6, a comfortable margin above
         the design velocity of Mach 2.
       </p>
 
       <div class="img-grid-2" style="margin-top:2rem;">
         <div>
-          <img src="images/sa-great-fins.JPG" alt="Fin can assembly"
+          <img src="images/IMG_1099.jpeg" alt="Fin can assembly"
                style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
-          <p class="img-caption">Fin can — structural fillets and tip-to-tip layup complete</p>
+          <p class="img-caption">Fin can assembly prior to tip-to-tip</p>
         </div>
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Fin jig / bonding process photo</span>
-          </div>
+          <img src="images/fincan.jpeg" alt="Fin Can Jig"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
           <p class="img-caption">Custom laser-cut MDF fin alignment jig</p>
         </div>
       </div>
@@ -176,21 +179,21 @@
       <h2>Nosecone</h2>
       <p>
         The nosecone was a manufacturing method I developed specifically for this
-        build. Starting with a single split mould — 3D printed for rapid prototyping —
+        build. Starting with a single split mould, 3D printed for rapid prototyping,
         I bogged and primed the mould surface, then wet laid and vacuum bagged two
         fibreglass half-shells. Fibreglass was chosen over carbon for RF transparency,
-        allowing the GPS antenna housed inside to transmit through the shell.
+        allowing the GPS antenna housed inside to transmit unimpeded.
       </p>
       <p>
         The two halves were bonded internally with fibreglass strips, producing a
-        clean external surface with no mechanical fasteners. An epoxy ring — machined
-        by me on a manual lathe — was bonded to the internal wall of the nosecone
-        using Epikote MGS BPR 135, providing the structural interface for the GPS
+        clean external surface with no mechanical fasteners. An epoxy ring, machined
+        by me on a manual lathe, was bonded to the internal wall of the nosecone, providing the structural interface for the GPS
         bulkhead. The GPS bulkhead itself was also machined on the lathe, bolting
         into the ring and providing the parachute attachment U-bolt mount. A secondary
         retention system uses an M6 threaded rod running from the brass nose tip
-        through to the bulkhead, tensioning everything in compression — belt and
-        braces for a flight-critical separation interface.
+        through to the bulkhead, tensioning everything in compression. Whilst the pullout
+        force on the epoxy ring is high enough without the nosetip tensioning the bukhead, 
+        a redundant failsafe is better than one!
       </p>
       <p>
         The nose tip was turned from brass in China — machining a clean point to that
@@ -216,7 +219,7 @@
 
     <!-- MACHINED COMPONENTS -->
     <div class="project-section">
-      <h2>Machined components</h2>
+      <h2>Machined Components</h2>
       <p>
         All aluminium components were machined by me personally. The bulkheads —
         four in total across the avionics bay and recovery interfaces — were milled
