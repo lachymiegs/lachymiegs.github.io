@@ -75,10 +75,6 @@
             This includes all bulkheads, the motor tube, fin can assembly, nosecone,
             avionics bay, motor retainer, and recovery hardware.
           </p>
-          <p>
-            For a solo build, a rocket of this scale is the equivalent of what ARES
-            produces as a full team over a year. It was completed in a matter of weeks.
-          </p>
           <a href="docs/sa-great-technical-report.pdf"
              style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-light); text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:2px;">
             ↓ Download technical report
@@ -121,53 +117,58 @@
         <div>
           <img src="images/sa-great-nc.JPG" alt="SA Great airframe"
                style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
-          <p class="img-caption">Completed airframe — nosecone and booster assembly</p>
+          <p class="img-caption">Completed airframe — nosecone assembly</p>
         </div>
         <div>
           <img src="images/sa-great-fins.JPG" alt="SA Great fins"
                style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
-          <p class="img-caption">Carbon plate fins — double diamond profile for Mach 2 flight</p>
+          <p class="img-caption">Fin can — double diamond profile for Mach 2 flight</p>
         </div>
       </div>
     </div>
 
     <!-- FIN CAN -->
     <div class="project-section">
-      <h2>Fin can</h2>
+      <h2>Fin Can</h2>
       <p>
-        Fins were waterjet cut from 5mm carbon plate, then hand chamfered on a belt
-        sander to a double diamond profile — optimised for high altitude, high velocity
-        flight to minimise wave drag. The motor tube was manufactured in-house: wet
-        laid onto a mandrel, then post-cured.
+        Fins were hand cut from 5mm carbon plate, then chamfered on a belt
+        sander to a double diamond profile, optimised for high altitude, high velocity
+        flight to minimise drag. The motor tube was manufactured in-house, wet
+        laid onto a mandrel, for a rapid turnaround.
       </p>
       <p>
         A custom fin jig was laser cut from 6mm MDF, designed so all four fins could
         be tacked onto the motor tube simultaneously and held in precise alignment
         during cure. After the initial tack bond using Epikote MGS BPR 135 bonding
         paste, larger structural fillets were added between each fin and the motor
-        tube, and waterjet cut centering rings were bonded at equidistant spacing.
+        tube, and lasercut cut centering rings were bonded at equidistant spacing.
+      </p>
+      <p>
+        The aft-most centering ring provides the interface for how thrust is transmitted through the airframe,
+        that is pushing through the fin can into the airframe, rather than into the motor retainer. To reinforce this region,
+        extra care was taken around the aft centering ring bond to the fins and outer airframe
+        to ensure the N3300 does not rip through the rocket.
       </p>
       <p>
         The fin can was then slid into slotted sections of the booster tube and bonded
-        with 25mm radius structural fillets of the same paste — large enough to
+        with 25mm radius structural fillets of the same paste, large enough to
         distribute the fin root loads across the tube wall effectively. The assembly
-        was finished with a tip-to-tip carbon layup: four layers, wet laid and vacuum
+        was finished with a tip-to-tip carbon layup, four layers, wet laid and vacuum
         bagged, staggered from small to large to prioritise root chord strength where
-        loads are highest. This added approximately 0.8–1.6mm of thickness, bringing
-        the fin flutter velocity to approximately Mach 2.6 — a comfortable margin above
+        loads are highest. This added approximately 0.8–1.6mm of tapered thickness, bringing
+        the fin flutter velocity to approximately Mach 2.6, a comfortable margin above
         the design velocity of Mach 2.
       </p>
 
       <div class="img-grid-2" style="margin-top:2rem;">
         <div>
-          <img src="images/sa-great-fins.JPG" alt="Fin can assembly"
+          <img src="images/IMG_1099.jpeg" alt="Fin can assembly"
                style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
-          <p class="img-caption">Fin can — structural fillets and tip-to-tip layup complete</p>
+          <p class="img-caption">Fin can assembly prior to tip-to-tip</p>
         </div>
         <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Fin jig / bonding process photo</span>
-          </div>
+          <img src="images/fincan.jpeg" alt="Fin Can Jig"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
           <p class="img-caption">Custom laser-cut MDF fin alignment jig</p>
         </div>
       </div>
@@ -178,21 +179,21 @@
       <h2>Nosecone</h2>
       <p>
         The nosecone was a manufacturing method I developed specifically for this
-        build. Starting with a single split mould — 3D printed for rapid prototyping —
+        build. Starting with a single split mould, 3D printed for rapid prototyping,
         I bogged and primed the mould surface, then wet laid and vacuum bagged two
         fibreglass half-shells. Fibreglass was chosen over carbon for RF transparency,
-        allowing the GPS antenna housed inside to transmit through the shell.
+        allowing the GPS antenna housed inside to transmit unimpeded.
       </p>
       <p>
         The two halves were bonded internally with fibreglass strips, producing a
-        clean external surface with no mechanical fasteners. An epoxy ring — machined
-        by me on a manual lathe — was bonded to the internal wall of the nosecone
-        using Epikote MGS BPR 135, providing the structural interface for the GPS
+        clean external surface with no mechanical fasteners. An epoxy ring, machined
+        by me on a manual lathe, was bonded to the internal wall of the nosecone, providing the structural interface for the GPS
         bulkhead. The GPS bulkhead itself was also machined on the lathe, bolting
         into the ring and providing the parachute attachment U-bolt mount. A secondary
         retention system uses an M6 threaded rod running from the brass nose tip
-        through to the bulkhead, tensioning everything in compression — belt and
-        braces for a flight-critical separation interface.
+        through to the bulkhead, tensioning everything in compression. Whilst the pullout
+        force on the epoxy ring is high enough without the nosetip tensioning the bukhead, 
+        a redundant failsafe is better than one!
       </p>
       <p>
         The nose tip was turned from brass in China — machining a clean point to that
@@ -218,7 +219,7 @@
 
     <!-- MACHINED COMPONENTS -->
     <div class="project-section">
-      <h2>Machined components</h2>
+      <h2>Machined Components</h2>
       <p>
         All aluminium components were machined by me personally. The bulkheads —
         four in total across the avionics bay and recovery interfaces — were milled
