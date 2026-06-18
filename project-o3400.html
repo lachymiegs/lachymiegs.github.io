@@ -55,7 +55,7 @@
         <div>
           <h2>Overview</h2>
           <p>
-            The O3400 record rocket is a sub-minimum diameter vehicle — the airframe
+            The O3400 record rocket is a sub-minimum diameter vehicle, where the airframe
             diameter matches the motor casing diameter exactly, eliminating any
             aerodynamic step between the two. Every millimetre of frontal area
             costs altitude. This is a rocket designed around one objective: go as
@@ -66,8 +66,8 @@
             <strong>81,000 ft</strong>, launching at Tolarno
             Station in New South Wales in Q3 2026. To get there, the vehicle will
             reach <strong>Mach 3.5</strong>, briefly entering a flight regime where
-            aeroheating, flutter, and structural loads interact in ways that standard
-            high-power rocketry hardware was never designed to handle.
+            aeroheating, flutter, and structural loads interact in ways that I have
+            never had to design hardware around.
           </p>
           <p>
             I am responsible for the fin can, with it, overall flight vehicle stability. There are
@@ -97,27 +97,26 @@
       <p>
         The fin shape is the primary lever for controlling both stability and apogee.
         On a sub-minimum diameter rocket, even millimetre changes to fin geometry
-        produce meaningful shifts in flight performance — stability margin, drag,
+        produce meaningful shifts in flight performance. Stability calibres, drag,
         and ultimately altitude are all directly coupled to the fin design.
       </p>
       <p>
         The theoretically optimal fin for pure speed is an aggressively tapered swept
-        design with the tip chord well behind the aft edge of the root chord. The
+        design with the tip chord behind the aft edge of the root chord. The
         problem is that this geometry is significantly more susceptible to flutter
-        during motor burn, and more likely to break on landing — which matters because
-        any damage that makes the vehicle unrepairable in the field forfeits the
-        record certification.
+        during motor burn, and more likely to break on landing. Any damage that makes 
+        the vehicle unrepairable in the field forfeits the record certification.
       </p>
       <p>
-        The finalised design is a <strong>tapered swept fin</strong> — closer to a
-        clipped delta than a pure taper — 340mm long and 88mm tall, with a sweep
+        The finalised design is a <strong>tapered swept fin</strong>, closer to a
+        clipped delta than a pure taper, 340mm long and 88mm tall, with a sweep
         angle exceeding 70°. Compared to the 98mm motor diameter, this is an
-        aggressive geometry. The boat tail on the CTI casing protects the fin roots
+        aggressive geometry. The boat tail on the CTI casing protects the nozzle
         on landing while also improving aerodynamic performance.
       </p>
       <p>
-        Wind limits are set at 2–3 m/s — half of what a typical sounding rocket
-        launches in. This is a deliberate stability trade: lower stability margin
+        Wind limits are set at 2–3 m/s, half of what a typical sounding rocket
+        launches in. This is a deliberate stability trade, lower stability margin
         means less fin area, which means less drag, which means more altitude. We
         can afford to make this trade because unlike a certification flight, we can
         simply wait for the right conditions.
@@ -126,7 +125,7 @@
       <div style="margin-top:2rem;">
         <img src="images/fin-can2.png" alt="O3400 fin geometry"
             style="width:100%; aspect-ratio:16/11; object-fit:cover; border-radius:3px; display:block;" />
-        <p class="img-caption">Fin geometry — OpenRocket simulation view</p>
+        <p class="img-caption">Finalised fin geometry</p>
       </div>
     </div>
 
@@ -141,24 +140,23 @@
         <strong>Aerodynamic heating.</strong> At Mach 3.5 the fin surfaces experience
         significant aeroheating — sufficient to approach the glass transition temperature
         of standard carbon epoxy systems. The mitigation is a post-cure cycle after
-        lamination, raising the glass transition point of the matrix resin above the
+        lamination, raising the glass transition point of the resin matrix above the
         expected thermal exposure. Given the vehicle only spends a fraction of a second
         at peak velocity, this is sufficient.
       </p>
       <p>
         <strong>Laminate peel.</strong> The intense aerodynamic forces at Mach 3.5
-        create peel loads at the leading and trailing edges of the fin laminates —
-        essentially trying to split the carbon layers apart. This is addressed by
+        create peel loads at the leading and trailing edges of the fin laminates, essentially trying to split the carbon layers apart. This is addressed by
         laminating additional epoxy resin into these regions, reinforcing the areas
         most exposed to peel loading.
       </p>
       <p>
-        <strong>Fin flutter.</strong> Flutter is the dominant concern — an aeroelastic
-        instability where aerodynamic forces drive the fins into resonance with their
-        own natural frequency. The result is catastrophic and instantaneous. Flutter
+        <strong>Fin flutter.</strong> Flutter is the dominant concern, where air passing over the fins can resonate with their
+        own natural frequency. The result is catastrophic and instantaneous, leading to a rapid unscheduled disassembly. Flutter
         calculations were run on both 3mm and 4mm thick fin options.
         <strong>3mm fins would almost certainly flutter at Mach 3.5.</strong>
-        4mm is the minimum viable thickness, and the thickness chosen.
+        4mm is the minimum viable thickness, and the thickness chosen. With a tip-to-tip over the top, this thickness will increase to around 5mm, 
+        providing a flutter margin just above Mach 3.5.
       </p>
     </div>
 
@@ -167,14 +165,15 @@
       <p>
         The fins bond directly to a carbon composite sleeve, which bonds directly
         to the motor casing and is blended into the motor tube. There are no
-        mechanical fasteners, no bolts, no stress concentrations at the fin root.
-        At Mach 3.5, every mechanical interface is a liability — the co-cured sleeve
-        removes them entirely, making the fins and motor tube a single structural element.
+        mechanical fasteners, no bolts, no stress concentrations at the fin root. 
+        A more conservative bolted fin approach would add a lot of unnecessary weight and drag,
+        neither of which are desirable for a record attempt. A bolted fin approach was however considered
+        due to ease of manufacturing, and no risk of delamination or softening under aeroheating as they would be aluminium. 
       </p>
       <p>
         The fin can is completed with a four-layer resin infused tip-to-tip layup.
         Resin infusion was chosen over wet layup specifically to eliminate air bubbles
-        and ensure perfect fibre alignment at the leading and trailing edges — the
+        and ensure perfect fibre alignment at the leading and trailing edges, the
         regions most critical to resisting peel loading. The result is a lighter,
         stronger, more consistent laminate. A post-cure cycle finishes the assembly
         before bonding to the motor casing.
@@ -193,7 +192,7 @@
       </p>
       <p>
         This page will be updated as manufacturing progresses and hardware is produced.
-        Stay tuned.
+        Stay tuned!
       </p>
     </div>
 
