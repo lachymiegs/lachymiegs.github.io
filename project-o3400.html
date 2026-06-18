@@ -31,153 +31,169 @@
         <span class="tag">Mach 3.5</span>
         <span class="tag">81,000 ft</span>
         <span class="tag gold">Record attempt</span>
-        <span class="tag gold">In design</span>
+        <span class="tag gold">Q3 2026</span>
       </div>
       <h1>O3400 Record Rocket</h1>
       <p class="project-hero-desc">
-        A record attempt on the O3400 motor altitude record, currently standing at
-        75,000 ft. We are projecting 81,000 ft. I am designing and building the
-        fin can to survive Mach 3.5 flight.
+        A direct attempt on the O3400 motor altitude record, currently standing at
+        75,000 ft. Built in conjunction with David Boyd, founder of the Victorian
+        Rocketry Association, Australia's first rocketry organisation, targeting
+        81,000 ft at Mach 3.5. Launching at Tolarno Station, New South Wales, Q3 2026.
       </p>
     </div>
   </div>
 
-  <div style="max-width:var(--wide); margin:0 auto; padding:2.5rem 3rem;">
-    <div class="img-placeholder" style="aspect-ratio:16/7;">
-      <span class="ph-label">↑ Replace with: OpenRocket side profile or best conceptual render</span>
-      <span class="ph-label" style="opacity:0.6;">A clean OpenRocket screenshot works well here</span>
-    </div>
+  <div style="max-width:var(--wide); margin:0 auto; padding:0 3rem;">
+    <img src="images/openrocket.png" alt="O3400 Record Rocket"
+         style="width:100%; aspect-ratio:16/2; object-fit:cover; object-position:center center; border-radius:3px; display:block;" />
   </div>
 
   <div class="project-content">
 
-    <!-- OVERVIEW -->
     <div class="project-section">
       <div class="sidebar-layout">
         <div>
           <h2>Overview</h2>
           <p>
-            The O3400 is one of the most powerful commercially available solid rocket
-            motors. The current altitude record for an O3400-powered vehicle stands
-            at 75,000 ft. This project is a direct attempt to push that to
-            <strong>81,000 ft</strong> — a 8% improvement on the existing record.
+            The O3400 record rocket is a sub-minimum diameter vehicle — the airframe
+            diameter matches the motor casing diameter exactly, eliminating any
+            aerodynamic step between the two. Every millimetre of frontal area
+            costs altitude. This is a rocket designed around one objective: go as
+            high as possible, and hopefully not tear itself apart on the way up.
           </p>
           <p>
-            At the velocities required to reach that altitude, the aerodynamic and
-            thermal environment is severe. The vehicle will reach <strong>Mach 3.5</strong>
-            — a flight regime where aeroheating, flutter, and structural loads interact
-            in ways that conventional high-power rocketry hardware is not designed to handle.
-            Every component has to be built specifically for this environment.
+            The current O3400 altitude record stands at 75,000 ft. We are projecting
+            <strong>81,000 ft</strong>, launching at Tolarno
+            Station in New South Wales in Q3 2026. To get there, the vehicle will
+            reach <strong>Mach 3.5</strong>, briefly entering a flight regime where
+            aeroheating, flutter, and structural loads interact in ways that standard
+            high-power rocketry hardware was never designed to handle.
           </p>
           <p>
-            I am responsible for the fin can — the most structurally and aerodynamically
-            demanding assembly on the vehicle.
+            I am responsible for the fin can, with it, overall flight vehicle stability. There are
+            no rail buttons on this rocket. We launch from a tower, and we will only launch
+            in winds below 2–3 m/s.
           </p>
         </div>
         <div class="spec-panel">
           <table class="spec-table">
             <tr><td>Motor</td><td>O3400</td></tr>
-            <tr><td>Target altitude</td><td>81,000 ft</td></tr>
-            <tr><td>Current record</td><td>75,000 ft</td></tr>
-            <tr><td>Max velocity</td><td>Mach 3.5</td></tr>
-            <tr><td>My role</td><td>Fin Can Lead</td></tr>
-            <tr><td>Architecture</td><td>Co-cured carbon sleeve</td></tr>
-            <tr><td>Status</td><td>Conceptual design</td></tr>
+            <tr><td>Airframe / Motor OD</td><td>98 mm</td></tr>
+            <tr><td>Target Altitude</td><td>81,000 ft</td></tr>
+            <tr><td>Current Record</td><td>75,000 ft</td></tr>
+            <tr><td>Max Velocity</td><td>Mach 3.5</td></tr>
+            <tr><td>Fin Thickness</td><td>4 mm carbon plate</td></tr>
+            <tr><td>Top Chord Length</td><td>88 mm</td></tr>
+            <tr><td>Root Chord Length</td><td>340 mm</td></tr>
+            <tr><td>Launch Site</td><td>Tolarno Station, NSW</td></tr>
+            <tr><td>Status</td><td>Design complete, pre-manufacturing</td></tr>
           </table>
         </div>
       </div>
     </div>
 
-    <!-- DESIGN ENVIRONMENT -->
     <div class="project-section">
-      <h2>The Mach 3.5 design environment</h2>
+      <h2>Fin Geometry</h2>
       <p>
-        Most high-power rocketry fin cans are designed for subsonic or low supersonic
-        flight. At Mach 3.5 the problem set changes fundamentally. The four primary
-        design drivers I am working through are:
+        The fin shape is the primary lever for controlling both stability and apogee.
+        On a sub-minimum diameter rocket, even millimetre changes to fin geometry
+        produce meaningful shifts in flight performance — stability margin, drag,
+        and ultimately altitude are all directly coupled to the fin design.
       </p>
       <p>
-        <strong>Aerodynamic loading.</strong> Dynamic pressure at Mach 3.5 produces
-        fin root bending moments and shear loads significantly beyond what standard
-        HPR hardware is rated for. I am sizing the fin geometry and attachment
-        architecture against these loads directly.
+        The theoretically optimal fin for pure speed is an aggressively tapered swept
+        design with the tip chord well behind the aft edge of the root chord. The
+        problem is that this geometry is significantly more susceptible to flutter
+        during motor burn, and more likely to break on landing — which matters because
+        any damage that makes the vehicle unrepairable in the field forfeits the
+        record certification.
       </p>
       <p>
-        <strong>Flutter margins.</strong> Fin flutter is a aeroelastic instability
-        that can destroy a fin can within milliseconds above a critical velocity.
-        Establishing adequate flutter margins at Mach 3.5 is a primary structural
-        requirement — not an afterthought.
+        The finalised design is a <strong>tapered swept fin</strong> — closer to a
+        clipped delta than a pure taper — 340mm long and 88mm tall, with a sweep
+        angle exceeding 70°. Compared to the 98mm motor diameter, this is an
+        aggressive geometry. The boat tail on the CTI casing protects the fin roots
+        on landing while also improving aerodynamic performance.
       </p>
       <p>
-        <strong>Thermal effects.</strong> Aerodynamic heating at Mach 3.5 produces
-        surface temperatures that affect material properties and introduce thermal
-        stresses. Material selection and thickness decisions have to account for
-        the thermal environment, not just mechanical loads.
-      </p>
-      <p>
-        <strong>Structural sizing.</strong> The fin can has to be light enough not
-        to hurt performance, stiff enough to maintain flutter margins, and strong
-        enough to survive the full load envelope. These constraints pull in different
-        directions and the co-cured architecture is the solution I have landed on
-        to satisfy all three simultaneously.
+        Wind limits are set at 2–3 m/s — half of what a typical sounding rocket
+        launches in. This is a deliberate stability trade: lower stability margin
+        means less fin area, which means less drag, which means more altitude. We
+        can afford to make this trade because unlike a certification flight, we can
+        simply wait for the right conditions.
       </p>
 
       <div style="margin-top:2rem;">
-        <div class="img-placeholder" style="aspect-ratio:16/9;">
-          <span class="ph-label">↑ OpenRocket simulation — velocity or altitude plot</span>
-        </div>
-        <p class="img-caption">OpenRocket flight simulation — O3400 to 81,000 ft</p>
+        <img src="images/fin-can2.png" alt="O3400 fin geometry"
+            style="width:100%; aspect-ratio:16/11; object-fit:cover; border-radius:3px; display:block;" />
+        <p class="img-caption">Fin geometry — OpenRocket simulation view</p>
       </div>
     </div>
 
-    <!-- CO-CURED ARCHITECTURE -->
     <div class="project-section">
-      <h2>Co-cured carbon composite sleeve architecture</h2>
+      <h2>Challenges at Mach 3.5</h2>
       <p>
-        The fin can uses a co-cured carbon composite sleeve bonded directly to the
-        motor tube, with the fins integrated into the sleeve during the cure cycle.
-        This eliminates mechanical attachment interfaces entirely — no bolts, no
-        fasteners, no stress concentrations at the fin root.
+        Designing a fin can for Mach 3.5 flight is a fundamentally different problem
+        to conventional high-power rocketry. Three specific failure modes had to be
+        addressed before manufacturing could begin.
       </p>
       <p>
-        The rationale is straightforward: at Mach 3.5, every mechanical interface
-        is a liability. Bolted fin attachments introduce stress concentrations,
-        require precise torque control, and can loosen under vibration and thermal
-        cycling. A co-cured sleeve removes all of that. The fins and the motor tube
-        become a single structural element.
+        <strong>Aerodynamic heating.</strong> At Mach 3.5 the fin surfaces experience
+        significant aeroheating — sufficient to approach the glass transition temperature
+        of standard carbon epoxy systems. The mitigation is a post-cure cycle after
+        lamination, raising the glass transition point of the matrix resin above the
+        expected thermal exposure. Given the vehicle only spends a fraction of a second
+        at peak velocity, this is sufficient.
       </p>
       <p>
-        [ As design progresses, add: layup schedule, fibre orientation rationale,
-        tooling approach, cure cycle. ]
+        <strong>Laminate peel.</strong> The intense aerodynamic forces at Mach 3.5
+        create peel loads at the leading and trailing edges of the fin laminates —
+        essentially trying to split the carbon layers apart. This is addressed by
+        laminating additional epoxy resin into these regions, reinforcing the areas
+        most exposed to peel loading.
       </p>
-
-      <div class="img-grid-2" style="margin-top:2rem;">
-        <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Conceptual CAD or sketch — fin can cross section</span>
-          </div>
-          <p class="img-caption">[ Co-cured sleeve concept ]</p>
-        </div>
-        <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ OpenRocket fin geometry view</span>
-          </div>
-          <p class="img-caption">[ Fin geometry — OpenRocket ]</p>
-        </div>
-      </div>
+      <p>
+        <strong>Fin flutter.</strong> Flutter is the dominant concern — an aeroelastic
+        instability where aerodynamic forces drive the fins into resonance with their
+        own natural frequency. The result is catastrophic and instantaneous. Flutter
+        calculations were run on both 3mm and 4mm thick fin options.
+        <strong>3mm fins would almost certainly flutter at Mach 3.5.</strong>
+        4mm is the minimum viable thickness, and the thickness chosen.
+      </p>
     </div>
 
-    <!-- STATUS -->
     <div class="project-section">
-      <h2>Current status</h2>
+      <h2>Co-cured Carbon Sleeve Architecture</h2>
       <p>
-        The project is in conceptual design. The vehicle architecture is defined,
-        the motor is selected, and the flight simulation is established in OpenRocket.
-        I am currently working through the structural and aeroelastic analysis that
-        will drive the fin geometry and layup schedule decisions.
+        The fins bond directly to a carbon composite sleeve, which bonds directly
+        to the motor casing and is blended into the motor tube. There are no
+        mechanical fasteners, no bolts, no stress concentrations at the fin root.
+        At Mach 3.5, every mechanical interface is a liability — the co-cured sleeve
+        removes them entirely, making the fins and motor tube a single structural element.
       </p>
       <p>
-        This page will be updated as the design matures and hardware is produced.
+        The fin can is completed with a four-layer resin infused tip-to-tip layup.
+        Resin infusion was chosen over wet layup specifically to eliminate air bubbles
+        and ensure perfect fibre alignment at the leading and trailing edges — the
+        regions most critical to resisting peel loading. The result is a lighter,
+        stronger, more consistent laminate. A post-cure cycle finishes the assembly
+        before bonding to the motor casing.
+      </p>
+      <p>
+        The finished fin can will, in theory, survive Mach 3.5 flight. We will find
+        out in Q3 2026.
+      </p>
+    </div>
+    <div class="project-section">
+      <h2>Status</h2>
+      <p>
+        Design is complete. Fin geometry is finalised, flutter margins are established,
+        and the manufacturing sequence is defined. Manufacturing begins shortly, with
+        the launch window at Tolarno Station targeted for Q3 2026.
+      </p>
+      <p>
+        This page will be updated as manufacturing progresses and hardware is produced.
+        Stay tuned.
       </p>
     </div>
 
