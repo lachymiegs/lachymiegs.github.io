@@ -3,32 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ARES Hybrid Rocket — Lachlan Miegel</title>
+  <title>Project Odyssey — Lachlan Miegel</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
-  <style>
-    .project-hero { padding: 5rem 0 4rem; border-bottom: 1px solid var(--rule); }
-    .project-hero-inner { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
-    .breadcrumb { font-family: var(--font-mono); font-size: 12px; color: var(--text-light); margin-bottom: 2rem; display: flex; gap: 0.5rem; align-items: center; }
-    .breadcrumb a { color: var(--text-light); text-decoration: none; }
-    .breadcrumb a:hover { color: var(--text); }
-    .project-hero h1 { margin-bottom: 1.25rem; }
-    .project-hero-desc { font-size: 18px; font-weight: 300; color: var(--text-mid); line-height: 1.75; max-width: 540px; margin-bottom: 2rem; }
-    .project-content { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
-    .project-section { padding: 3.5rem 0; border-bottom: 1px solid var(--rule); }
-    .project-section:last-child { border-bottom: none; }
-    .project-section h2 { margin-bottom: 1.25rem; }
-    .project-section p { font-size: 16px; }
-    .img-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
-    .sidebar-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: start; }
-    .project-nav { display: flex; justify-content: space-between; padding: 2.5rem 0; border-top: 1px solid var(--rule); margin-top: 2rem; }
-    .project-nav a { font-size: 14px; color: var(--text-mid); text-decoration: none; transition: color 0.15s; }
-    .project-nav a:hover { color: var(--text); }
-    @media (max-width: 680px) {
-      .sidebar-layout { grid-template-columns: 1fr; }
-      .img-grid-2 { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
 
@@ -49,189 +26,196 @@
         <span>—</span>
         <span>Project Odyssey</span>
       </div>
-      <div class="tags" style="margin-bottom:1.25rem;">
+      <div class="tags" style="margin-bottom:1rem;">
         <span class="tag">Team Lead</span>
         <span class="tag">SRAD Hybrid</span>
-        <span class="tag">120 members</span>
-        <span class="tag">In manufacturing</span>
+        <span class="tag">M-class</span>
+        <span class="tag">10,000 ft</span>
+        <span class="tag gold">AURC 2026</span>
+        <span class="tag gold">IREC 2027</span>
       </div>
       <h1>Project Odyssey</h1>
       <p class="project-hero-desc">
-        ARES' first student researched and developed hybrid rocket. Nitrous-paraffin M-class
-        motor, ~4.5 kN thrust, targeting 10,000 ft. I lead the 120-member team, set technical direction, and
-        manage external stakeholders. 
+        ARES Rocketry's first ever student researched and developed hybrid rocket.
+        Nitrous oxide and paraffin-ABS propellant, M-class motor targeting 10,000 ft.
+        I lead the 120-member team developing it, managing everything from
+        technical direction to sponsorship, policy, and competition strategy.
       </p>
     </div>
   </div>
 
-  <div style="max-width:var(--wide); margin:0 auto; padding:2.5rem 3rem;">
-    <div class="img-placeholder" style="aspect-ratio:16/7;">
-      <span class="ph-label">↑ Replace with: full vehicle CAD render or best team build photo</span>
-    </div>
+  <!-- HERO IMAGE -->
+  <div style="max-width:var(--wide); margin:0 auto; padding:0 3rem;">
+    <img src="images/hot-fire.png" alt="Project Odyssey hot fire"
+         style="width:100%; aspect-ratio:16/5; object-fit:cover; object-position:center center; border-radius:3px; display:block;" />
   </div>
 
   <div class="project-content">
 
-    <!-- OVERVIEW -->
+    <!-- THE PROGRAM -->
     <div class="project-section">
       <div class="sidebar-layout">
         <div>
-          <h2>Program overview</h2>
+          <h2>The program</h2>
           <p>
-            ARES Rocketry is a 120-member student engineering organisation at the
-            University of Melbourne. This is the team's most ambitious project —
-            a fully student-researched-and-developed hybrid rocket, the first of
-            its kind in Australia.
+            Project Odyssey is ARES Rocketry's most ambitious undertaking — the
+            team's first ever fully student-researched and developed hybrid rocket.
+            Unlike previous ARES competition entries which flew commercial motors,
+            Odyssey develops its own propulsion system from scratch: a
+            <strong>nitrous oxide and paraffin-ABS</strong> hybrid motor targeting
+            M-class thrust (~4.5 kN) to carry the vehicle to 10,000 ft.
           </p>
           <p>
-            As <strong>Team Lead</strong> I set technical direction, run formal
-            CDR/PDR-style design reviews, manage delivery timelines across six
-            subteams, and serve as the primary point of contact for university
-            faculty, suppliers, and external stakeholders — all under a $60k
-            annual budget.
+            The program spans six subteams — propulsion, structures, avionics,
+            recovery, ground support, and systems — across 120 members. The target
+            is <strong>AURC 2026</strong>, with IREC 2027 as the international
+            competition goal where I will serve as flyer of record.
+          </p>
+          <p>
+            [ Add further technical detail here — motor architecture, vehicle
+            configuration, key design decisions. ]
           </p>
         </div>
-        <div>
+        <div class="spec-panel">
           <table class="spec-table">
-            <tr><td>Propellant</td><td>Nitrous oxide / paraffin</td></tr>
+            <tr><td>Propellant</td><td>Nitrous oxide / paraffin-ABS</td></tr>
             <tr><td>Motor class</td><td>M-class (~4.5 kN)</td></tr>
             <tr><td>Target altitude</td><td>10,000 ft</td></tr>
-            <tr><td>Team size</td><td>115 members, 6 subteams</td></tr>
+            <tr><td>Team size</td><td>120 members, 6 subteams</td></tr>
             <tr><td>Annual budget</td><td>$60k AUD</td></tr>
-            <tr><td>Recovery</td><td>Side-hatch (AU first)</td></tr>
-            <tr><td>CAD</td><td>Onshape</td></tr>
+            <tr><td>Target competition</td><td>AURC 2026</td></tr>
+            <tr><td>IREC entry</td><td>2027 (flyer of record)</td></tr>
             <tr><td>Status</td><td>In manufacturing</td></tr>
           </table>
         </div>
       </div>
     </div>
 
-    <!-- STRUCTURES LEAD WORK -->
-    <div class="project-section">
-      <h2>Structures lead work (2023–2025)</h2>
-      <p>
-        Before becoming Team Lead I spent two years as Structures Lead, personally
-        designing and manufacturing the fin can, avionics bay, and primary structural
-        assemblies. I produced full flight vehicle CAD in Onshape integrating hundreds
-        of components across all subsystems.
-      </p>
-      <p>
-        [ Describe the most interesting structural design decisions — what made the
-        fin can geometry challenging, what the avionics bay interface required,
-        any manufacturing constraints you designed around. ]
-      </p>
-
-      <div style="margin-top:2rem;">
-        <div class="img-placeholder" style="aspect-ratio:16/9;">
-          <span class="ph-label">↑ Full vehicle CAD — exploded view or full assembly screenshot</span>
-        </div>
-        <p class="img-caption">Full flight vehicle CAD — [ describe view ]</p>
-      </div>
-
-      <div class="img-grid-2" style="margin-top:1rem;">
-        <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Fin can — fabricated hardware</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
-        </div>
-        <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Avionics bay detail</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- SIDE HATCH -->
-    <div class="project-section">
-      <h2>Australia's first side-hatch recovery mechanism</h2>
-      <p>
-        The recovery system for the hybrid rocket uses a side-hatch deployment
-        architecture — the first of its kind in Australia. I am responsible for
-        the full system: design rationale, system architecture, metallic component
-        fabrication, and vehicle integration interfaces.
-      </p>
-      <p>
-        [ This is your most novel technical contribution on this project — describe
-        it in detail. What is a side-hatch mechanism and why is it used here?
-        What problem does it solve compared to conventional nosecone ejection?
-        What were the key design challenges — sealing, deployment reliability,
-        structural interface? How did you validate it? ]
-      </p>
-
-      <div style="margin-top:2rem;">
-        <div class="img-placeholder" style="aspect-ratio:16/9;">
-          <span class="ph-label">↑ Side-hatch mechanism — best photo or CAD render</span>
-        </div>
-        <p class="img-caption">[ Caption ]</p>
-      </div>
-
-      <div class="img-grid-2" style="margin-top:1rem;">
-        <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ CAD detail — hatch interface</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
-        </div>
-        <div>
-          <div class="img-placeholder" style="aspect-ratio:4/3;">
-            <span class="ph-label">↑ Fabricated hardware detail</span>
-          </div>
-          <p class="img-caption">[ Caption ]</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- COMPOSITES -->
-    <div class="project-section">
-      <h2>Composite manufacturing</h2>
-      <p>
-        [ Describe the composite work on ARES — the nosecone manufacturing process
-        you redesigned, any fin can layup work, tooling developed. Reference your
-        wet layup / vacuum bagging / resin infusion experience as appropriate.
-        What was the specific improvement in the nosecone process? ]
-      </p>
-
-      <div style="margin-top:2rem;">
-        <div class="img-placeholder" style="aspect-ratio:16/9;">
-          <span class="ph-label">↑ Composite manufacturing — layup process or nosecone photo</span>
-        </div>
-        <p class="img-caption">[ Caption ]</p>
-      </div>
-    </div>
-
-    <!-- TEAM LEAD -->
+    <!-- LEADING THE PROGRAM -->
     <div class="project-section">
       <h2>Leading the program</h2>
       <p>
-        Taking on the Team Lead role mid-program meant inheriting ongoing work
-        across six technically independent subteams while simultaneously making
-        the structural transition from hands-on builder to program director.
+        Taking on the Team Lead role meant stepping back from hands-on work and
+        into a different kind of engineering problem — running a complex program
+        with many moving parts, competing priorities, and real consequences for
+        getting it wrong. The technical decisions still land with me, but the job
+        is as much about removing blockers, maintaining momentum, and keeping
+        120 people aligned as it is about engineering.
       </p>
       <p>
-        [ Describe what leading 115 people actually involves day-to-day — running
-        design reviews, managing the interface between subteams, making final
-        technical calls, dealing with supplier relationships and faculty stakeholders.
-        What's the hardest part of the job? What have you learned? ]
+        My contributions to Odyssey include securing sponsorships that directly
+        fund the program, writing high-level technical documentation for external
+        stakeholders and competition officials, and introducing new ARES policy
+        documentation to formalise how the organisation operates. On the operations
+        side I have organised the hot fire campaign and key test events, managing
+        the logistics, safety planning, and stakeholder communication those
+        activities require.
       </p>
+      <p>
+        External relationships are a significant part of the role — liaising with
+        university faculty and the engineering department, managing sponsor
+        relationships, coordinating with the Victorian Rocketry Association on
+        launch operations, and engaging with AURC and IREC competition officials.
+        Maintaining those relationships is what keeps the program moving.
+      </p>
+
+      <div class="img-grid-2" style="margin-top:2rem;">
+        <div>
+          <img src="images/placeholder.jpeg" alt="Odyssey team"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">ARES Rocketry team — Project Odyssey</p>
+        </div>
+        <div>
+          <img src="images/placeholder.jpeg" alt="Odyssey design review"
+               style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;" />
+          <p class="img-caption">Formal design review</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOT FIRE -->
+    <div class="project-section">
+      <h2>Hot fire campaign</h2>
+      <p>
+        The hot fire campaign was a significant milestone for the program —
+        the first time ARES fired a student-developed hybrid motor. Organising
+        it involved coordinating across propulsion, ground support, and safety
+        teams, sourcing and managing the test site, and ensuring the event met
+        regulatory and safety requirements.
+      </p>
+      <p>
+        [ Add detail on the hot fire result — what was tested, what the data
+        showed, what changed in the design as a result. ]
+      </p>
+
+      <div style="margin-top:2rem;">
+        <img src="images/hot-fire.png" alt="Odyssey hot fire"
+             style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:3px; display:block;" />
+        <p class="img-caption">Project Odyssey — hybrid motor hot fire</p>
+      </div>
     </div>
 
     <div class="project-nav">
-      <a href="project-l3.html">← Project SA Great</a>
-      <a href="project-headrests.html">Pedal Prix Headrests →</a>
+      <a href="project-o3400.html">← O3400 Record Rocket</a>
+      <a href="project-lemaire.html">Project Lemaire →</a>
     </div>
 
   </div>
 
+  <!-- PHOTO HIGHLIGHTS -->
+  <div style="max-width:var(--wide); margin:0 auto; padding:0 3rem 3rem;">
+    <div style="padding:2rem 0 1.5rem; border-top:1px solid var(--rule);">
+      <h2>Highlights</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem;">
+
+      <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+        <img src="images/placeholder.jpeg" alt="Highlight 1"
+             style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.03)'"
+             onmouseout="this.style.transform='scale(1)'" />
+        <div class="highlight-caption">Your caption here</div>
+      </div>
+
+      <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+        <img src="images/placeholder.jpeg" alt="Highlight 2"
+             style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.03)'"
+             onmouseout="this.style.transform='scale(1)'" />
+        <div class="highlight-caption">Your caption here</div>
+      </div>
+
+      <div style="position:relative; overflow:hidden; border-radius:3px; cursor:pointer;">
+        <img src="images/placeholder.jpeg" alt="Highlight 3"
+             style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; transition:transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.03)'"
+             onmouseout="this.style.transform='scale(1)'" />
+        <div class="highlight-caption">Your caption here</div>
+      </div>
+
+    </div>
+  </div>
+
   <footer class="site-footer">
-    <span class="footer-left">© 2026 Lachlan Miegel</span>
-    <ul class="footer-links">
-      <li><a href="mailto:lachy.miegel@gmail.com">Email</a></li>
-      <li><a href="https://www.linkedin.com/in/lachlan-miegel-b42b261a9/" target="_blank">LinkedIn</a></li>
-      <li><a href="#top">Top</a></li>
-    </ul>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Lachlan Miegel</div>
+        <div class="footer-desc">Mechanical Engineering · University of Melbourne · Hansen Scholar</div>
+        <div class="footer-contact">
+          <a href="mailto:lachy.miegel@gmail.com">lachy.miegel@gmail.com</a>
+          <a href="https://www.linkedin.com/in/lachlan-miegel-b42b261a9/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-links">
+          <li><a href="index.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="mailto:lachy.miegel@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 Lachlan Miegel</div>
   </footer>
 
 </body>
